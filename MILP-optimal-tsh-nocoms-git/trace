@@ -1,0 +1,54 @@
+CPLEX> show conflict all
+Command 'show' does not exist.  Type 'help' for a list of commands.
+CPLEX> display conflict all
+Minimize
+ obj:
+Subject To
+ IloC12:      - IloX0 - 31.72 IloX1 - 21.1466666666667 IloX2 - 15.86 IloX3
+              - 31.72 IloX4 - 21.1466666666667 IloX5 - 15.86 IloX6
+              - 31.72 IloX7 - 21.1466666666667 IloX8 - 15.86 IloX9 + IloX31
+              >= 0
+ IloC281:     - 1480.8 IloX275 - 1480.8 IloX277 - 1480.8 IloX279 + IloX285
+              - 1480.8 IloX286 - 1480.8 IloX287 - 1480.8 IloX288 >= -2960.6
+ IloC306:     IloX275 + IloX277 + IloX279  = 1
+ IloC307:     IloX282 + IloX283 + IloX284  = 1
+ IloC316:     - IloX1 - IloX2 - IloX3 + IloX275  = 0
+ IloC317:     - IloX4 - IloX5 - IloX6 + IloX277  = 0
+ IloC318:     - IloX7 - IloX8 - IloX9 + IloX279  = 0
+ IloC1664:    - IloX282 - IloX283 - IloX284 - IloX286 - IloX287 - IloX288
+              + IloX874 + 2 IloX875  = 0
+ IloC3444:    IloX31 - 1480.8 IloX286 - 1480.8 IloX287 - 1480.8 IloX288 <= 0
+ IloC1173211: IloX874  = 1
+\Sum of equality rows in the conflict:
+\ sum_eq: - IloX1 - IloX2 - IloX3 - IloX4 - IloX5 - IloX6 - IloX7 - IloX8
+\         - IloX9 + 2 IloX275 + 2 IloX277 + 2 IloX279 - IloX286 - IloX287
+\         - IloX288 + 2 IloX874 + 2 IloX875  = 3
+Bounds
+ 0 <= IloX1 <= 1
+ 0 <= IloX2 <= 1
+ 0 <= IloX3 <= 1
+ 0 <= IloX4 <= 1
+ 0 <= IloX5 <= 1
+ 0 <= IloX6 <= 1
+ 0 <= IloX7 <= 1
+ 0 <= IloX8 <= 1
+ 0 <= IloX9 <= 1
+      IloX31 Free
+ 0 <= IloX275 <= 1
+ 0 <= IloX277 <= 1
+ 0 <= IloX279 <= 1
+ 0 <= IloX282 <= 1
+ 0 <= IloX283 <= 1
+ 0 <= IloX284 <= 1
+ 0 <= IloX285 <= 1
+ 0 <= IloX286 <= 1
+ 0 <= IloX287 <= 1
+ 0 <= IloX288 <= 1
+ 0 <= IloX874 <= 1
+ 0 <= IloX875 <= 1
+ All other variables are >= 0.
+Binaries
+ IloX1  IloX2  IloX3  IloX4  IloX5  IloX6  IloX7  IloX8  IloX9  IloX275 
+ IloX277  IloX279  IloX282  IloX283  IloX284  IloX285  IloX286  IloX287 
+ IloX288  IloX874  IloX875 
+CPLEX> 
