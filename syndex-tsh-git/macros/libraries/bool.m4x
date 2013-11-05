@@ -1,0 +1,91 @@
+dnl bool library
+divert(-1)
+
+# ###### *** BITWISE *** ######
+
+# Bitwise Not (one's complement)
+def_lib(`NOT', `ifelse(MGC,`LOOP',`gNOT(shift($@))')')
+
+# Bitwise And
+def_lib(`AND', `ifelse(MGC,`LOOP',`gand(shift($@))')')
+
+# Bitwise Or
+def_lib(`OR', `ifelse(MGC,`LOOP',`gor(shift($@))')')
+
+# Bitwise Xor
+def_lib(`XOR', `ifelse(MGC,`LOOP',`gxor(shift($@))')')
+
+# ###### *** TYPE CAST *** ######
+
+def_lib(`bool2int', `ifelse(MGC,`LOOP',`gcast(shift($@))')')
+def_lib(`bool2char', `ifelse(MGC,`LOOP',`gcast(shift($@))')')
+
+# ######## *** I/O *** ########
+
+# Constant
+define(`f_cst',`ifelse(0,$1,,`buffer_[eval($1-1)]=last_($@);dnl
+_(f_cst(eval($1-1),shift_R_($@)))')')
+
+def_lib(`cst',`ifelse($#,eval($1+2),,`error_(`Expected eval($1+2) arguments.')')dnl
+define(`buffer_',last_($@))dnl
+ifelse(MGC,`INIT',`f_cst(shift_R_($@))')')
+
+# Sensor
+
+define(`f_input_b',`ifelse(0,$1,`printf_(%s,"\n");',`printf_($2[%d]: ,eval($1-1));dnl
+scanf_(int,eval($1-1),last_($@));dnl 
+_(f_input_b(eval($1-1),last_($@)))')')
+
+def_lib(`input',`ifelse(dnl
+MGC,`INIT',`',dnl
+MGC,`LOOP',`f_input_b($@)',
+MGC,`END',`dnl')')
+
+
+# Actuator
+
+define(`f_output_b',`ifelse(0,$1,`printf_(%s,"\n");',`printf_($2[%d] : %d,eval($1-1),$2[eval($1-1)]);dnl
+_(f_output_b(eval($1-1),last_($@)))')')
+
+def_lib(`output',`ifelse(dnl
+MGC,`INIT',`dnl',
+MGC,`LOOP',`f_output_b($@)',
+MGC,`END',`dnl')')
+
+
+# ###### *** DELAY *** ######
+
+# delay
+define(`f_delay',`ifelse(0,$1,,`buffer_[eval($1-1)]=last_($@);dnl
+_(f_delay(eval($1-1),shift_R_($@)))')')
+
+def_lib(`delay',`dnl
+define(`buffer_',last_($@))dnl
+ifelse(MGC,`INIT',`f_delay(shift_R_(shift_R_(shift_R_($@))))')')
+
+# window
+def_lib(`window',`ifelse(dnl
+MGC,`INIT',`_(zero_($4))',dnl
+MGC,`LOOP',`_(shift_($4,$3))',dnl
+MGC,`END',`')')
+
+divert`'dnl ---------------------- End of file -------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

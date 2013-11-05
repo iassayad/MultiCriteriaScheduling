@@ -1,0 +1,420 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2002.4.12)  6 JUN 2004 19:21
+**tutorial.tex
+(tutorial.tex
+LaTeX2e <2000/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/report.cls
+Document Class: report 2000/05/19 v1.4b Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2000/08/30 v1.91 Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2000/08/30 v1.91 Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+))
+(/usr/share/texmf/tex/latex/misc/fullpage.sty
+Style Option FULLPAGE Version 2 as of 15 Dec 1988
+) (/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+) (tutorial.aux)
+\openout1 = `tutorial.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 11.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 11
+.
+
+(/usr/share/texmf/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 20
+.
+
+(/usr/share/texmf/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 20
+.
+
+(/usr/share/texmf/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 20
+.
+
+(/usr/share/texmf/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 20.
+ [1
+
+] [2
+
+]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
+ (tutorial.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+ [3
+
+])
+\tf@toc=\write3
+\openout3 = `tutorial.toc'.
+
+
+[4]
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 39.
+ [5
+
+
+] [6]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 130.
+File: figures/Algorithm_NewLocalDefinition_Sensor.eps Graphic file (type eps)
+<figures/Algorithm_NewLocalDefinition_Sensor.eps>
+File: figures/Name_of_the_new_definition.eps Graphic file (type eps)
+
+<figures/Name_of_the_new_definition.eps>
+File: figures/Definition_window.eps Graphic file (type eps)
+ <figures/Definition_window.eps>
+[7
+
+
+]
+File: figures/Edit_CreatePort.eps Graphic file (type eps)
+ <figures/Edit_CreatePort.eps> [8] [9]
+File: figures/Edit_CreateReference.eps Graphic file (type eps)
+ <figures/Edit_CreateReference.eps>
+File: figures/algorithm_ex1.eps Graphic file (type eps)
+
+<figures/algorithm_ex1.eps>
+File: figures/archi.eps Graphic file (type eps)
+ <figures/archi.eps>
+File: figures/Architecture_NewLocalArchitecture.eps Graphic file (type eps)
+
+<figures/Architecture_NewLocalArchitecture.eps>
+File: figures/Edit_CreateOperatorReference.eps Graphic file (type eps)
+
+<figures/Edit_CreateOperatorReference.eps>
+File: figures/architecture_ex1.eps Graphic file (type eps)
+ <figures/architecture_ex1.eps>
+[10] [11] [12] [13] [14]
+File: figures/Media_of_communication_SPP.eps Graphic file (type eps)
+ <figures/Media_of_communication_SPP.eps> [15]
+File: figures/architecture_ex1_2u_SPP.eps Graphic file (type eps)
+
+<figures/architecture_ex1_2u_SPP.eps>
+File: figures/architecture_ex1_3u_SMP.eps Graphic file (type eps)
+ <figures/architecture_ex1_3u_SMP.eps>
+[16]
+File: figures/architecture_ex1_3u_RAM.eps Graphic file (type eps)
+ <figures/architecture_ex1_3u_RAM.eps>
+File: figures/Adequation.eps Graphic file (type eps)
+ <figures/Adequation.eps>
+Overfull \hbox (14.09207pt too wide) in paragraph at lines 563--564
+ [] 
+ []
+
+[17] [18]
+File: figures/create_software_component.eps Graphic file (type eps)
+ <figures/create_software_component.eps>
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 596--597
+ [] 
+ []
+
+File: figures/attach_software_component.eps Graphic file (type eps)
+<figures/attach_software_component.eps>
+File: figures/Algorithm_constraints.eps Graphic file (type eps)
+ <figures/Algorithm_constraints.eps>
+File: figures/Adequation_constraints.eps Graphic file (type eps)
+
+<figures/Adequation_constraints.eps>
+Overfull \hbox (14.09207pt too wide) in paragraph at lines 641--642
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19] [20] [21]
+Chapter 2.
+File: figures/Edit_ParametersNames.eps Graphic file (type eps)
+<figures/Edit_ParametersNames.eps>
+File: figures/OperationA.eps Graphic file (type eps)
+ <figures/OperationA.eps>
+File: figures/OperationB.eps Graphic file (type eps)
+
+<figures/OperationB.eps> [22
+
+] [23]
+File: figures/algorithm_ex2.eps Graphic file (type eps)
+ <figures/algorithm_ex2.eps> [24] [25]
+Chapter 3.
+File: figures/algorithm_ex3.eps Graphic file (type eps)
+<figures/algorithm_ex3.eps> [26
+
+]
+Chapter 4.
+File: figures/Edit_ParametersNamesAndValues.eps Graphic file (type eps)
+<figures/Edit_ParametersNamesAndValues.eps> [27
+
+]
+File: figures/File_IncludeLibrary_int.eps Graphic file (type eps)
+
+<figures/File_IncludeLibrary_int.eps>
+File: figures/Library_int.eps Graphic file (type eps)
+ <figures/Library_int.eps>
+File: figures/algorithm_ex4.eps Graphic file (type eps)
+
+<figures/algorithm_ex4.eps> [28]
+File: figures/algorithm_ex4_dpacc.eps Graphic file (type eps)
+ <figures/algorithm_ex4_dpacc.eps>
+File: figures/algorithm_ex4_dp.eps Graphic file (type eps)
+
+<figures/algorithm_ex4_dp.eps>
+File: figures/algorithm_ex4_prodmatvec.eps Graphic file (type eps)
+ <figures/algorithm_ex4_prodmatvec.eps> [29]
+[30] [31]
+File: figures/algorithmMain2_ex4.eps Graphic file (type eps)
+ <figures/algorithmMain2_ex4.eps> [32]
+Chapter 5.
+File: figures/Edit_CreateCondition.eps Graphic file (type eps)
+<figures/Edit_CreateCondition.eps>
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 1068--1069
+ [] 
+ []
+
+File: figures/Condition1.eps Graphic file (type eps)
+<figures/Condition1.eps>
+File: figures/Condition2.eps Graphic file (type eps)
+ <figures/Condition2.eps>
+File: figures/Condition3.eps Graphic file (type eps)
+ <figures/Condition3.eps>
+File: figures/Condition4.eps Graphic file (type eps)
+
+<figures/Condition4.eps>
+File: figures/algorithm_ex5.eps Graphic file (type eps)
+ <figures/algorithm_ex5.eps> [33
+
+] [34] [35]
+File: figures/Condition1_algo2.eps Graphic file (type eps)
+
+<figures/Condition1_algo2.eps>
+File: figures/Condition2_algo2.eps Graphic file (type eps)
+ <figures/Condition2_algo2.eps>
+File: figures/algorithmMain2_ex5.eps Graphic file (type eps)
+
+<figures/algorithmMain2_ex5.eps> [36] [37]
+Chapter 6.
+File: figures/algorithm_ex6.eps Graphic file (type eps)
+<figures/algorithm_ex6.eps>
+File: figures/architecture_ex6.eps Graphic file (type eps)
+ <figures/architecture_ex6.eps> [38
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 1277.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1278--1281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1282--1286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1289--1290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1291--1295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1331
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1340--1345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1360--1361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1368
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1369--1372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1375--1377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1399--1401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1402--1404
+
+ []
+
+[39] [40] [41] [42] (tutorial.aux) ) 
+Here is how much of TeX's memory you used:
+ 1153 strings out of 20887
+ 13746 string characters out of 196274
+ 57218 words of memory out of 350001
+ 4079 multiletter control sequences out of 10000+15000
+ 43913 words of font info for 65 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 26i,7n,21p,222b,607s stack positions out of 3000i,100n,1500p,50000b,4000s
+
+Output written on tutorial.dvi (42 pages, 64640 bytes).

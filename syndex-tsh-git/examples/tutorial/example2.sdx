@@ -1,0 +1,70 @@
+syndex_version : "6.6.1"
+
+# Libraries
+
+# Algorithms
+def actuator output  200,200:
+ ? int[1] i 1 @8,8;
+
+def sensor input  200,200:
+ ! int[1] o 1 @170,8;
+
+def algorithm calcul1  206,160:
+ ? int[1] a 1 @8,8;
+ ? int[1] b 2 @8,36;
+ ! int[1] o 1 @170,8;
+
+def constant constante  219,138:
+ ! int[1] o 1 @170,8;
+
+def algorithm A <T> 221,146:
+ ? int[1] a 1 @8,8;
+ ! int[1] o 1 @185,52;
+conditions: true;
+references:
+ constante  Cste @12,77;
+ calcul1  calc1 @101,22;
+dependences:
+ strong_precedence_data calc1.o -> o;
+ strong_precedence_data a -> calc1.a;
+ strong_precedence_data Cste.o -> calc1.b;
+
+def algorithm B <X;Y> 342,178:
+ ? int[1] a 1 @11,54;
+ ? int[1] b 2 @12,154;
+ ! int[1] o 1 @306,89;
+conditions: true;
+references:
+ A<X>  A1 @115,24;
+ A<Y>  A2 @116,124;
+ calcul1  calc1 @222,59;
+dependences:
+ strong_precedence_data calc1.o -> o;
+ strong_precedence_data A2.o -> calc1.b;
+ strong_precedence_data A1.o -> calc1.a;
+ strong_precedence_data b -> A2.a;
+ strong_precedence_data a -> A1.a;
+
+def algorithm Main  324,167:
+conditions: true;
+references:
+ input  i1 @118,23;
+ input  i2 @118,105;
+ output  out @361,49;
+ B<1;2>  B @261,49;
+dependences:
+ strong_precedence_data i2.o -> B.b;
+ strong_precedence_data i1.o -> B.a;
+ strong_precedence_data B.o -> out.i;
+
+
+# Architectures
+
+# Main Algorithm / Main Architecture
+main algorithm Main ;
+
+# Extra durations
+
+# Software components
+
+# Constraints

@@ -1,0 +1,87 @@
+syndex_version : "6.6.0"
+
+# Libraries
+include "float.sdx";
+include "u.sdx";
+
+# Algorithms
+def algorithm ega  538,290:
+conditions: true;
+references:
+ float/window<1;9> windA @201,157;
+ float/window<1;9> windB @193,278;
+ float/dotProduct<9> filtA @302,143;
+ float/dotProduct<9> filtB @316,264;
+ float/Arit_sub<1> sub @400,250;
+ float/Arit_mul<1> mul @477,177;
+ float/output<1> visu @556,250;
+ float/equalize<9> adap @555,149;
+ float/delay<{1,2,3,4,5,6,7,8,9};1> coeff @555,75;
+ float/cst<{0,0,0,0,1,0,0,0,0}> coef1 @213,220;
+ float/cst<{0}> gain @389,177;
+ float/input<1> gensig @102,190;
+dependences:
+ strong_precedence_data gensig.o -> windA.i;
+ strong_precedence_data gensig.o -> windB.i;
+ strong_precedence_data filtA.o -> sub.a;
+ strong_precedence_data filtB.o -> sub.b;
+ strong_precedence_data sub.o -> mul.b;
+ strong_precedence_data sub.o -> visu.i;
+ strong_precedence_data adap.c2 -> coeff.i;
+ strong_precedence_data coeff.o -> adap.c;
+ strong_precedence_data coeff.o -> filtA.i1;
+ strong_precedence_data windA.o -> filtA.i2;
+ strong_precedence_data windB.o -> filtB.i2;
+ strong_precedence_data coef1.o -> filtB.i1;
+ strong_precedence_data mul.o -> adap.err;
+ strong_precedence_data gain.o -> mul.a;
+
+
+# Architectures
+def architecture mono 140,93:
+operators:
+ u/U root @31,29;
+ main operator root;
+medias:
+connections:
+
+def architecture biproc 280,75:
+operators:
+ u/U root @27,41;
+ u/U pc1 @216,40;
+ main operator root;
+medias:
+ u/TCP link broadcast @133,44;
+connections:
+ root.x link;
+ pc1.x link;
+
+
+# Main Algorithm / Main Architecture
+main algorithm ega ;
+main architecture biproc;
+
+# Extra durations
+extra_durations_media u/TCP :
+float = 2;
+float = 2;
+float = 2;
+bool = 1;
+bool = 1;
+bool = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+int = 2;
+int = 2;
+int = 2;
+
+# Software components
+
+# Constraints

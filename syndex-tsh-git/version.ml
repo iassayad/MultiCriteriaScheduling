@@ -1,0 +1,16 @@
+(*************************************************************************)
+(*                                                                       *)
+(*                                                                       *)
+(*                               SynDEx 6                                *)
+(*                                                                       *)
+(*                          Christophe Macabiau                          *)
+(*                                                                       *)
+(*                     Projet Ostre, INRIA Rocquencourt                  *)
+(*                                                                       *)
+(*   Copyright 2000 Institut National de Recherche en Informatique et    *)
+(*   en Automatique.  All rights reserved.  This file is distributed     *)
+(*   under the terms of the Q Public License version 1.0.                *)
+(*                                                                       *)
+(*************************************************************************)
+
+let version = "6.7.0"

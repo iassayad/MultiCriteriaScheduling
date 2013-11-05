@@ -1,0 +1,54 @@
+\contentsline {chapter}{Introduction}{5}
+\contentsline {subsubsection}{In the example 1 (algorithm, architecture and adequation):}{5}
+\contentsline {subsubsection}{In the example 2 (hierarchy in algorithm):}{5}
+\contentsline {subsubsection}{In the example 3 (delay and constant in algorithm):}{5}
+\contentsline {subsubsection}{In the example 4 (repetition and library in algorithm):}{5}
+\contentsline {subsubsection}{In the example 5 (condition and nested condition in algorithm):}{6}
+\contentsline {subsubsection}{In the example 6 (algorithm, architecture, adequation and code generation):}{6}
+\contentsline {chapter}{\numberline {1}Example 1 : algorithm, architecture and adequation}{7}
+\contentsline {section}{\numberline {1.1}Creation of the algorithm}{7}
+\contentsline {subsection}{\numberline {1.1.1}Creation of a new local definition for a sensor}{7}
+\contentsline {subsection}{\numberline {1.1.2}Creation of a new local definition for an actuator}{8}
+\contentsline {subsection}{\numberline {1.1.3}Creation of a new local definition for a function}{8}
+\contentsline {subsection}{\numberline {1.1.4}Creation of the main algorithm definition}{8}
+\contentsline {section}{\numberline {1.2}Creation of architecture with one operator}{10}
+\contentsline {subsection}{\numberline {1.2.1}Creation of a new operator definition}{10}
+\contentsline {subsection}{\numberline {1.2.2}Creation of the main architecture definition}{10}
+\contentsline {section}{\numberline {1.3}Creation of architecture with two operators and a media of communication (Sam Point to Point)}{14}
+\contentsline {subsection}{\numberline {1.3.1}Creation of new operator definitions}{14}
+\contentsline {subsection}{\numberline {1.3.2}Creation of a new media definition}{15}
+\contentsline {subsection}{\numberline {1.3.3}Creation of the main architecture definition}{15}
+\contentsline {subsection}{\numberline {1.3.4}Creation of the connections between the operators and the media}{16}
+\contentsline {section}{\numberline {1.4}Creation of architecture with three operators and a media of communication (SAM MultiPoint)}{16}
+\contentsline {section}{\numberline {1.5}Creation of architecture with three operators and a media of communication (RAM)}{17}
+\contentsline {section}{\numberline {1.6}To perform the Adequation}{17}
+\contentsline {subsection}{\numberline {1.6.1}The Adequation without constraint}{17}
+\contentsline {subsection}{\numberline {1.6.2}The Adequation with constraints}{17}
+\contentsline {chapter}{\numberline {2}Example 2 : hierarchy in algorithm}{22}
+\contentsline {section}{\numberline {2.1}The algorithm}{22}
+\contentsline {subsection}{\numberline {2.1.1}Creation of the definition ``A''}{22}
+\contentsline {subsection}{\numberline {2.1.2}Creation of the definition ``B''}{22}
+\contentsline {subsection}{\numberline {2.1.3}Creation of the main algorithm definition}{24}
+\contentsline {chapter}{\numberline {3}Example 3 : delay and constant in algorithm}{26}
+\contentsline {section}{\numberline {3.1}The algorithm}{26}
+\contentsline {subsection}{\numberline {3.1.1}Creation of the functions ``in1'', ``out1'', ``calc''}{26}
+\contentsline {subsection}{\numberline {3.1.2}Creation of the delay definition}{26}
+\contentsline {subsection}{\numberline {3.1.3}Creation of the algorithm}{26}
+\contentsline {chapter}{\numberline {4}Example 4 : repetition and library in algorithm}{27}
+\contentsline {section}{\numberline {4.1}Creation of the algorithm without library}{27}
+\contentsline {subsection}{\numberline {4.1.1}Creation of the sensor ``ins'' and function ``mul'' (function on scalars):}{27}
+\contentsline {subsection}{\numberline {4.1.2}Creation of the sensor ``inv'' and actuator ``outv'' (operations on vectors):}{27}
+\contentsline {section}{\numberline {4.2}Creation of the algorithm with library ``int''}{28}
+\contentsline {subsection}{\numberline {4.2.1}Creation of the operations with the library ``int'':}{28}
+\contentsline {section}{\numberline {4.3}Creation of the algorithm with library float}{28}
+\contentsline {chapter}{\numberline {5}Example 5 : condition and nested condition in algorithm}{33}
+\contentsline {section}{\numberline {5.1}Creation of the first algorithm}{33}
+\contentsline {subsection}{\numberline {5.1.1}Creation of the sensors ``x'' and ``i'' (type ``input''), the actuator ``o'' (type ``output'')}{33}
+\contentsline {subsection}{\numberline {5.1.2}Creation of the definition ``switch1''}{33}
+\contentsline {section}{\numberline {5.2}Creation of the second algorithm}{33}
+\contentsline {subsection}{\numberline {5.2.1}Creation of the sensors ``x'' and ``i'' of the type ``input'', the actuator ``o'' of the type ``output''}{33}
+\contentsline {subsection}{\numberline {5.2.2}Creation of the definition ``switch2''}{36}
+\contentsline {chapter}{\numberline {6}Example 6 : algorithm, architecture, adequation and code generation}{38}
+\contentsline {section}{\numberline {6.1}Creation of the algorithm}{38}
+\contentsline {section}{\numberline {6.2}Creation of the architecture}{38}
+\contentsline {section}{\numberline {6.3}The Code Generation}{39}

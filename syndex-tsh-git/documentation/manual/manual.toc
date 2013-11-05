@@ -1,0 +1,46 @@
+\contentsline {chapter}{\numberline {1}Overview}{4}
+\contentsline {chapter}{\numberline {2}Getting started}{5}
+\contentsline {chapter}{\numberline {3}Libraries}{6}
+\contentsline {chapter}{\numberline {4}Using the interface}{7}
+\contentsline {section}{\numberline {4.1}Contextual menus}{7}
+\contentsline {section}{\numberline {4.2}Selection}{7}
+\contentsline {section}{\numberline {4.3}Zoom}{8}
+\contentsline {section}{\numberline {4.4}Contextual informations}{8}
+\contentsline {section}{\numberline {4.5}Retrieving a vertex in a complex graph}{8}
+\contentsline {section}{\numberline {4.6}Graph elements becoming inactive}{8}
+\contentsline {chapter}{\numberline {5}Algorithm}{9}
+\contentsline {section}{\numberline {5.1}To create an algorithm definition}{10}
+\contentsline {section}{\numberline {5.2}To condition an algorithm definition}{11}
+\contentsline {section}{\numberline {5.3}To repeat an algorithm definition}{12}
+\contentsline {subsection}{\numberline {5.3.1}Implicit repetition specification}{12}
+\contentsline {subsection}{\numberline {5.3.2}Explicit repetition specification}{12}
+\contentsline {subsection}{\numberline {5.3.3}Explicit versus implicit}{13}
+\contentsline {section}{\numberline {5.4}To modify an algorithm definition or a reference}{13}
+\contentsline {section}{\numberline {5.5}To delete an algorithm definition}{13}
+\contentsline {chapter}{\numberline {6}Architecture}{14}
+\contentsline {section}{\numberline {6.1}Operator}{14}
+\contentsline {subsection}{\numberline {6.1.1}To create an operator definition}{14}
+\contentsline {subsection}{\numberline {6.1.2}To modify an operator definition}{14}
+\contentsline {subsection}{\numberline {6.1.3}To delete an operator definition}{15}
+\contentsline {section}{\numberline {6.2}Medium}{15}
+\contentsline {subsection}{\numberline {6.2.1}To create a medium definition}{15}
+\contentsline {subsection}{\numberline {6.2.2}To modify a medium definition}{15}
+\contentsline {subsection}{\numberline {6.2.3}To delete a medium definition}{15}
+\contentsline {section}{\numberline {6.3}Architecture}{15}
+\contentsline {subsection}{\numberline {6.3.1}To create an architecture definition}{15}
+\contentsline {subsection}{\numberline {6.3.2}To modify an architecture definition}{16}
+\contentsline {subsection}{\numberline {6.3.3}To delete an architecture definition}{16}
+\contentsline {chapter}{\numberline {7}Characteristics}{17}
+\contentsline {chapter}{\numberline {8}Constraints}{18}
+\contentsline {chapter}{\numberline {9}Adequation}{19}
+\contentsline {chapter}{\numberline {10}Code generation}{21}
+\contentsline {section}{\numberline {10.1}Overview}{21}
+\contentsline {section}{\numberline {10.2}How to Compile an Executive}{22}
+\contentsline {section}{\numberline {10.3}How to Load the Compiled Executive}{22}
+\contentsline {section}{\numberline {10.4}How to Automate the Compilation/Load Process}{22}
+\contentsline {chapter}{\numberline {11}SynDEx Downloader Specification}{24}
+\contentsline {section}{\numberline {11.1}Context}{24}
+\contentsline {section}{\numberline {11.2}Boot and Download Process}{24}
+\contentsline {section}{\numberline {11.3}Common Download Format}{25}
+\contentsline {section}{\numberline {11.4}Downloader Macros}{26}
+\contentsline {chapter}{\numberline {12}Links}{28}

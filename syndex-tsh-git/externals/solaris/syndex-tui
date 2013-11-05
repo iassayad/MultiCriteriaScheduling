@@ -1,0 +1,9 @@
+#!/bin/tcsh
+setenv INSTALL_DIR .
+# if required set to /usr/local/lib/tcl8.3 or higher
+setenv TCL_LIBRARY ""
+# if required set to /usr/local/lib/tk8.3 or higher
+setenv TK_LIBRARY ""
+if ( ! $?LD_LIBRARY_PATH ) setenv LD_LIBRARY_PATH ""  
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${TCL_LIBRARY}:${TK_LIBRARY}:${INSTALL_DIR}/bin
+${INSTALL_DIR}/bin/syndex-tui -libs ${INSTALL_DIR}/libs $* &

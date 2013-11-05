@@ -1,0 +1,28 @@
+### OCaml Compiler
+OCAML_BIN_DIR = /home/popart/assayad/ocamlinstalldir/bin
+OCAML_LIB_DIR = /home/popart/assayad/ocamlinstalldir/lib/ocaml
+#CAMLTK_DIR = /scratch/akalla/ocaml-3.07/otherlibs/labltk
+#CAMLTK_DIR = /usr/lib/ocaml/labltk
+CAMLTK_DIR = /home/popart/assayad/ocamlinstalldir/lib/ocaml/labltk
+#/local/kalla/lib/ocaml/labltk 
+#/usr/lib/ocaml-3.07/otherlibs/labltk
+
+### Installation and distribution directories
+INSTALL_DIR_NAME = syndex$(SYNDEX_VERSION)
+INSTALL_DIR = /scratch/kalla/$(INSTALL_DIR_NAME)/
+DISTRIB_DIR = $(HOME)/distrib/linux/
+
+INSTALL_BIN_DIR = $(INSTALL_DIR)/bin
+LIBS_DIR = libs
+MACROS_DIR = macros
+EXAMPLES_DIR = examples
+EXTERNALS_DIR = externals
+EXTERNALS_COMMON_DIR = $(EXTERNALS_DIR)/common
+DOC_DIRECTORY = documentation/ocamldoc
+
+### Outils divers
+GTAR = gtar
+COMPRESS = $(GTAR) cvfz
+EXECUTABLE_EXT=
+SCRIPT_EXT=
+COMPRESS_EXT = .tgz

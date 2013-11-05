@@ -1,0 +1,135 @@
+syndex_version : "6.6.0"
+
+# Libraries
+include "int.sdx";
+include "u.sdx";
+
+# Algorithms
+def algorithm offset <offset> 327,123:
+ ? int[1] in 1 @12,11;
+ ! int[1] out 1 @288,16;
+conditions: true;
+references:
+ int/Arit_add<1> add @179,13;
+ int/cst<offset> cstParam @13,55;
+dependences:
+ strong_precedence_data add.o -> out;
+ strong_precedence_data in -> add.a;
+ strong_precedence_data cstParam.o -> add.b;
+
+def algorithm A  307,106:
+ ? int[1] a 1 @5,5;
+ ? int[1] x 2 @6,76;
+ ! int[1] x 1 @275,37;
+conditions: true;
+references:
+ int/Arit_add add @118,17;
+dependences:
+ strong_precedence_data add.o -> x;
+ strong_precedence_data x -> add.b;
+ strong_precedence_data a -> add.a;
+
+def algorithm Main  285,171:
+conditions: true;
+references:
+ int/input<1> input @35,78;
+ int/output<1> out1 @243,46;
+ int/output<1> out2 @246,144;
+ offset<{1}> offset1 @128,46;
+ offset<{-1}> offset2 @129,144;
+dependences:
+ strong_precedence_data offset2.out -> out2.i;
+ strong_precedence_data input.o -> offset2.in;
+ strong_precedence_data input.o -> offset1.in;
+ strong_precedence_data offset1.out -> out1.i;
+
+def algorithm B  363,237:
+ ? int[1] a 1 @-20,20;
+ ? int[1] b 2 @-18,152;
+ ! int[1] o 1 @296,109;
+conditions: true;
+references:
+ int/cst<0> zero @-27,74;
+ int/cst<1> un @-22,187;
+ A A1 @102,41;
+ A A2 @103,123;
+ int/Arit_add add @188,82;
+dependences:
+ strong_precedence_data add.o -> o;
+ strong_precedence_data A1.x -> add.a;
+ strong_precedence_data A2.x -> add.b;
+ strong_precedence_data un.o -> A2.x;
+ strong_precedence_data b -> A2.a;
+ strong_precedence_data zero.o -> A1.x;
+ strong_precedence_data a -> A1.a;
+
+def algorithm C  389,201:
+ ? int[1] a 1 @5,5;
+ ? int[1] b 2 @4,83;
+ ? int[1] c 3 @5,169;
+ ! int[1] o 1 @349,87;
+conditions: true;
+references:
+ B B1 @120,21;
+ B B2 @122,102;
+ int/Arit_add add @225,57;
+dependences:
+ strong_precedence_data add.o -> o;
+ strong_precedence_data B2.o -> add.b;
+ strong_precedence_data B1.o -> add.a;
+ strong_precedence_data b -> B2.a;
+ strong_precedence_data c -> B2.b;
+ strong_precedence_data b -> B1.b;
+ strong_precedence_data a -> B1.a;
+
+
+# Architectures
+def architecture mono 175,92:
+operators:
+ u/U root @30,29;
+ main operator root;
+medias:
+connections:
+
+
+# Main Algorithm / Main Architecture
+main algorithm Main ;
+main architecture mono;
+
+# Extra durations
+extra_durations_operator u/U :
+offset = 2;
+C = 4;
+extra_durations_media u/TCP :
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+
+# Software components
+
+# Constraints
+absolute constraint : onEcu1 on architest.ecu1 ;
+absolute constraint : onEcu2 on architest.ecu2 ;
+absolute constraint : onRoot on architest.root ;
+relative constraint : disjunction xcs1 xsc2 xsc3;

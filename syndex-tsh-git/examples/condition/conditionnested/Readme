@@ -1,0 +1,11 @@
+Code Generation
+conditionnested.sdx, Code C for linux, TCP/IP
+
+To generate code (see manual for more information) :
+1. load your application in SynDEx,
+2. do the Adequation (menu Adequation),
+3. generate the code (menu Code),
+4. edit the file basic.m4m and substitute 'charpentier' by the name of a remote workstation
+5. in the directory of the application, type the command make
+
+This will generate the code and launch the execution.

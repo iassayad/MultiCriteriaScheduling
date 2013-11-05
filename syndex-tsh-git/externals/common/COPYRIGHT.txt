@@ -1,0 +1,74 @@
+This Software "SynDEx v6" is copyright INRIA 2000-2002.
+
+INRIA holds all the ownership rights on the Software.  The scientific community
+is asked to use this Software in order to test and evaluate it.
+
+INRIA freely grants the right to use this Software.  Any use or reproduction of
+the Software to obtain profit or for commercial ends being subject to obtaining
+the prior express authorization of INRIA.
+
+INRIA authorizes any reproduction of this Software:
+
+- in limits defined in clauses 9 and 10 of the Berne agreement for the
+  protection of literary and artistic works, which respectively specify in
+  their paragraphs 2 and 3 authorizing only the reproduction and quoting of
+  works on the condition that:
+
+  "this reproduction does not adversely affect the normal exploitation of the
+  work or cause any unjustified prejudice to the legitimate interests of the
+  author",
+
+  "that the quotations given by way of illustration and/or tuition conform to
+  the proper uses and that it mentions the source and name of the author if
+  this name appears in the source",
+
+- under the condition that this file is included with any reproduction.
+ 
+Any commercial use made without obtaining the prior express agreement of INRIA
+would therefore constitute a fraudulent imitation.
+
+The Software being currently developed, INRIA is assuming no liability, and
+should not be responsible, in any manner or any case, for any direct or
+indirect dammages sustained by the user.
+
+Any user of the Software shall notify INRIA of any comments concerning the use
+of the Software (e-mail: Yves.Sorel@inria.fr).
+
+--
+
+Ce LOGICIEL "SynDEx v6" est couvert par le copyright INRIA 2000-2002.
+
+L'INRIA détient tous les droits de propriété sur le LOGICIEL, et souhaite que
+la communauté scientifique l'utilise afin de le tester et de l'évaluer.
+
+L'INRIA donne gracieusement le droit d'utiliser ce LOGICIEL.  Toute utilisation
+dans un but lucratif ou à des fins commerciales est interdite sauf autorisation
+expresse et préalable de l'INRIA.
+
+L'INRIA autorise toute reproduction de ce LOGICIEL :
+
+- dans les limites définies aux articles 9 et 10 de la convention de Berne pour
+  la protection des oeuvres littéraires et artistiques pris respectivement dans
+  leurs alinéas 2 et 3, c'est-à-dire à condition :
+
+  "qu'une telle reproduction ne porte pas atteinte à l'exploitation normale de
+  l'oeuvre, ni ne cause un préjudice injustifié aux intérêts légitimes de
+  l'auteur",
+
+  "que les citations à titre d'illustration et/ou d'un enseignement soient
+  conformes aux bons usages et qu'il soit fait mention de la source et du nom
+  de l'auteur, si ce nom figure dans la source",
+
+- à condition que toute reproduction soit accompagnée du présent fichier.
+
+Toute utilisation hors des limites précisées ci-dessus et réalisée sans
+l'accord expresse préalable de l'INRIA constituerait donc le délit de
+contrefaçon.
+
+Le LOGICIEL étant un produit en cours de développement, l'INRIA ne saurait
+assurer aucune responsabilité et notamment en aucune manière et en aucun cas,
+être tenu de répondre d'éventuels dommages directs ou indirects subits par
+l'utilisateur.
+
+Tout utilisateur du LOGICIEL s'engage à communiquer à l'INRIA ses remarques
+relatives à l'usage du LOGICIEL (Mél. : Yves.Sorel@inria.fr).

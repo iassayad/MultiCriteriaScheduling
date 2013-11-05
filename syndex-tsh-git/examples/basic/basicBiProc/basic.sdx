@@ -1,0 +1,113 @@
+syndex_version : "6.6.0"
+
+# Libraries
+include "int.sdx";
+include "u.sdx";
+
+# Algorithms
+def algorithm algoBasic  301,165:
+conditions: true;
+references:
+ int/output<1> visumul @178,91;
+ int/cst<{5}> cste2 @13,105;
+ int/output<1> visuadd @176,11;
+ int/Arit_mul<1> mul @103,91;
+ int/Arit_add<1> add @103,11;
+ int/cst<{2}> cste1 @12,16;
+dependences:
+ strong_precedence_data cste1.o -> mul.a;
+ strong_precedence_data cste1.o -> add.a;
+ strong_precedence_data add.o -> visuadd.i;
+ strong_precedence_data mul.o -> visumul.i;
+ strong_precedence_data cste2.o -> add.b;
+ strong_precedence_data cste2.o -> mul.b;
+
+
+# Architectures
+def operator C :
+gate PPL x;
+
+int/Arit_mul = 2;
+int/output = 3;
+int/Arit_add = 2;
+
+def media PPL :
+sampp;
+int = 2;
+
+def architecture monoProc 148,89:
+operators:
+ u/U root @73,54;
+ main operator root;
+medias:
+connections:
+
+def architecture biProc 373,79:
+operators:
+ u/U root @73,54;
+ u/U pc1 @350,55;
+ main operator root;
+medias:
+ u/TCP link broadcast @223,57;
+connections:
+ root.x link;
+ pc1.x link;
+
+
+# Main Algorithm / Main Architecture
+main algorithm algoBasic ;
+main architecture biProc;
+
+# Extra durations
+extra_durations_operator u/U :
+conv = 1;
+extra_durations_media u/TCP :
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+
+# Software components
+
+# Constraints
+absolute constraint : xsc1 on archi.pc1 ;
+absolute constraint : xsc2 on archi.root ;
+relative constraint : disjunction xsc1 xsc2;

@@ -1,0 +1,5 @@
+#!/bin/tcsh
+setenv TCL_LIBRARY bin/tcl8.3
+setenv TK_LIBRARY bin/tk8.3
+setenv LD_LIBRARY_PATH bin
+bin/syndex -bin bin -libs libs -html /usr/local/bin/netscape $* &

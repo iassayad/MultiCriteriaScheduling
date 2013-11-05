@@ -1,0 +1,75 @@
+dnl (c)INRIA 2001
+divert(-1)
+# SynDEx v5 generic architecture macros definitions (makefile generator),
+# with default specific macros generating C compilation rules;
+# see <type>.m4m for macros specific to processor type <type>.
+
+# ------
+# error_(msg) displays error message with file and line error location
+define(`error_',`errprint(__file__:__line__: m4: `$1
+')')
+
+ifdef(`__gnu__',,`dnl GNU m4 predefines the `__gnu__' macro
+error_(`this file must be processed by GNU m4 (REQUIRED!)')m4exit(1)')
+
+ifdef(  __file__`_already_included',`error_(`already included')m4exit(1)',
+`define(__file__`_already_included')')
+
+ifelse(`
+# --------------------------------------------------
+# Example command line: m4 syndex.m4m appli.m4 >appli.mk
+# Example appli.m4:
+include(syndex.m4m)dnl
+architecture_(appli,
+	SynDEx v5.1 (c)INRIA 1999, Thu Aug 26 12:43:51 1999
+)
+processor_(C,root)
+endarchitecture_
+# --------------------------------------------------
+# processor_ macros are generated in loading order: depth-first traversal order
+# of the architecture-graphe coverage-tree rooted on the "root" processor.
+')
+
+# --------------------------------------------------
+# architecture_(appliName, versionStamp, dateStamp)
+define(`architecture_', `dnl versionStamp SHOULD be checked
+# $2, $3
+# Makefile for application $1
+pushdef(`appli_', $1)
+# $(M4) must be the GNU macroprocessor m4
+# $(Macros_Path) must be the path to the generic *.m4? macro-files
+# $(VPATH) is searched by make for dependent files not found in $(PWD)
+VPATH = $(Macros_Path)
+
+.PHONY: $1.all $1.run clean
+$1.run : $1.all # load and run $1:
+       # (command args = processors in loading order)
+	./$($1.root)
+sinclude($1.m4m)')
+
+# --------------------------------------------------
+# processor_(type,name {, gateType,gateName})
+define(`processor_', `
+# processor $2 type=$1:
+appli_.all : $2
+appli_.root += $2
+pushdef(`procr_', $2)pushdef(`gateTypes_',gates_(shift(shift($@))))dnl
+include($1.m4m)dnl compilation rules for processorType $1
+popdef(`gateTypes_')popdef(`procr_')')
+
+ifdef(`root_opr_',,`define(`root_opr_',$2)')
+pushdef(`operators_list_',$2)
+define(`gates_', `ifelse($1,,,`dnl
+ifdef($1`_type_',`gates_(shift(shift($@)))',`dnl
+define($1`_type_')$1.m4x gates_(shift(shift($@)))undefine($1`_type_')dnl
+')')')
+
+# --------------------------------------------------
+# connect_(linkType,linkName {, processorName,gateName})
+define(`connect_')dnl Nothing worth for now
+
+# --------------------------------------------------
+# endarchitecture_()
+define(`endarchitecture_', `popdef(`appli_')')
+
+divert`'dnl -------------- end of file ------------------

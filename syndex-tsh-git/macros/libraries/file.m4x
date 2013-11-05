@@ -1,0 +1,79 @@
+dnl int library
+divert(-1)
+
+def(`read',`ifelse(
+MGC,`INIT',`$4[0]=fopen($2,"r");',
+MGC,`LOOP',`fscanf($4[0],$1,&$3);',
+MGC,`END',`fclose($4[0]);')')
+
+def(`write',`ifelse(
+MGC,`INIT',`$4[0]=fopen($2,"w");',
+MGC,`LOOP',`fprintf($4[0],$1,$3[0]);',
+MGC,`END',`fclose($4[0]);')')
+
+def_lib(`read_int',`read("%d",$@)')
+
+def_lib(`read_float',`read("%f",$@)')
+
+def_lib(`write_int',`write("%d ",$@)')
+
+def_lib(`write_float',`write("%f ",$@)')
+
+
+# READ_WRITE_FILE
+
+def(`reading',`ifelse(
+MGC,`INIT',`	char *chaine[1];
+		char *filename[10];
+		int j=0;
+		int test=0;',
+MGC,`LOOP',`{int i; for(i=0; i<j; i++){
+			 if(chaine[0] == filename[i]){
+			fscanf($3[0],$1,&$4);
+			test=1;}
+}}
+	if(test == 0){
+		$3[0]=fopen($2,"r");
+		fscanf($3[0],$1,&$4);
+		strcpy(&filename[j],$2);}
+		j++;
+		test=0;',
+MGC,`END',`fclose($3[0]);')')
+
+def(`writing',`ifelse(
+MGC,`INIT',`
+		char *filename2[10];
+		int k=0;
+		int test2=0;',
+MGC,`LOOP',`{int i; for(i=0; i<k; i++){
+			if(chaine[0] == filename2[i]){
+			fprintf($4[0],$1,$3[0]);
+			test2=1;}
+}}
+	if(test2 == 0){
+		$4[0]=fopen($2,"w");
+		fprintf($4[0],$1,$3[0]);
+		strcpy(&filename2[k],$2);}
+		k++;
+		test2=0;',
+MGC,`END',`fclose($4[0]);')')
+
+def_lib(`r_int',`reading("%d",$@)')
+
+def_lib(`w_int',`writing("%d",$@)')
+
+def_lib(`r_float',`reading("%f",$@)')
+
+def_lib(`w_float',`writing("%f",$@)')
+
+def_lib(`input',`ifelse(
+MGC,INIT,`dnl',
+MGC,LOOP,`	printf("$1 input:\n");
+		scanf("%s",&$1);
+		strcpy(&chaine[0],$1);
+		printf("- $1 = %s\n",&chaine[0]);',
+MGC,`END',`dnl')')
+
+
+
+divert`'dnl ---------------------- End of file -------------------------

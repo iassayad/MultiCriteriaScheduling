@@ -1,0 +1,518 @@
+syndex_version : "6.7.0"
+application description : ""
+
+# Libraries
+
+
+# Algorithms
+def sensor v1  :
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+ ! datatype_1[1] out_3 3 ;
+description : "Random Sensor"
+
+def algorithm v2  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v3  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v4  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v5  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v6  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+ ! datatype_1[1] out_3 3 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v7  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v8  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v9  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v10  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v11  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v12  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v13  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v14  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v15  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v16  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v17  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v18  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v19  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v20  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v21  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v22  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ? datatype_1[1] in_3 3 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v23  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+ ! datatype_1[1] out_2 2 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v24  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v25  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v26  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v27  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v28  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def algorithm v29  :
+ ? datatype_1[1] in_1 1 ;
+ ! datatype_1[1] out_1 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def actuator v30  :
+ ? datatype_1[1] in_1 1 ;
+ ? datatype_1[1] in_2 2 ;
+ ? datatype_1[1] in_3 3 ;
+ ? datatype_1[1] in_4 4 ;
+ ? datatype_1[1] in_5 5 ;
+description : "Random Actuator"
+
+def algorithm main_algo_m  1228,821:
+conditions: true;
+references:
+ v1  v1 @100,164;
+ v2  v2 @173,127;
+ v3  v3 @287,164;
+ v4  v4 @289,104;
+ v5  v5 @288,228;
+ v6  v6 @378,105;
+ v7  v7 @394,210;
+ v8  v8 @388,289;
+ v9  v9 @486,387;
+ v10  v10 @484,118;
+ v11  v11 @486,212;
+ v12  v12 @481,298;
+ v13  v13 @590,108;
+ v14  v14 @600,202;
+ v15  v15 @600,293;
+ v16  v16 @601,352;
+ v17  v17 @717,188;
+ v18  v18 @706,112;
+ v19  v19 @715,267;
+ v20  v20 @713,352;
+ v21  v21 @605,421;
+ v22  v22 @845,241;
+ v23  v23 @850,155;
+ v24  v24 @833,380;
+ v25  v25 @1014,470;
+ v26  v26 @998,230;
+ v27  v27 @1012,394;
+ v28  v28 @1009,144;
+ v29  v29 @1010,320;
+ v30  v30 @1234,278;
+dependences:
+ strong_precedence_data v1.out_1 -> v2.in_1;
+ strong_precedence_data v1.out_2 -> v5.in_2;
+ strong_precedence_data v1.out_3 -> v3.in_1;
+ strong_precedence_data v2.out_1 -> v4.in_1;
+ strong_precedence_data v2.out_2 -> v5.in_1;
+ strong_precedence_data v3.out_1 -> v8.in_1;
+ strong_precedence_data v3.out_2 -> v7.in_1;
+ strong_precedence_data v4.out_1 -> v8.in_2;
+ strong_precedence_data v5.out_1 -> v6.in_1;
+ strong_precedence_data v6.out_1 -> v11.in_1;
+ strong_precedence_data v6.out_2 -> v10.in_1;
+ strong_precedence_data v6.out_3 -> v12.in_1;
+ strong_precedence_data v7.out_1 -> v11.in_2;
+ strong_precedence_data v8.out_1 -> v9.in_1;
+ strong_precedence_data v9.out_1 -> v13.in_1;
+ strong_precedence_data v9.out_2 -> v14.in_1;
+ strong_precedence_data v10.out_1 -> v14.in_2;
+ strong_precedence_data v11.out_1 -> v15.in_1;
+ strong_precedence_data v12.out_1 -> v16.in_1;
+ strong_precedence_data v12.out_2 -> v21.in_1;
+ strong_precedence_data v13.out_1 -> v17.in_1;
+ strong_precedence_data v13.out_2 -> v18.in_1;
+ strong_precedence_data v14.out_1 -> v17.in_2;
+ strong_precedence_data v15.out_1 -> v19.in_1;
+ strong_precedence_data v16.out_1 -> v19.in_2;
+ strong_precedence_data v16.out_2 -> v20.in_1;
+ strong_precedence_data v17.out_1 -> v22.in_1;
+ strong_precedence_data v18.out_1 -> v23.in_1;
+ strong_precedence_data v19.out_1 -> v24.in_1;
+ strong_precedence_data v20.out_1 -> v22.in_2;
+ strong_precedence_data v21.out_1 -> v22.in_3;
+ strong_precedence_data v22.out_1 -> v25.in_1;
+ strong_precedence_data v23.out_1 -> v26.in_1;
+ strong_precedence_data v24.out_1 -> v27.in_1;
+ strong_precedence_data v22.out_2 -> v28.in_1;
+ strong_precedence_data v23.out_2 -> v29.in_1;
+ strong_precedence_data v25.out_1 -> v30.in_3;
+ strong_precedence_data v26.out_1 -> v30.in_1;
+ strong_precedence_data v27.out_1 -> v30.in_2;
+ strong_precedence_data v28.out_1 -> v30.in_4;
+ strong_precedence_data v29.out_1 -> v30.in_5;
+code_phases:  loopseq;
+
+
+# Architectures
+def operator P4 :
+gate GATE_TYPE_1 gate_1;gate GATE_TYPE_1 gate_2;gate GATE_TYPE_1 gate_3;gate GATE_TYPE_1 gate_4;
+v19 = 3.;
+v30 = 12.;
+v18 = 2.;
+v17 = 4.;
+v16 = 8.;
+R = 1.;
+v15 = 2.;
+v14 = 3.;
+v13 = 2.;
+v12 = 4.;
+v9 = 3.;
+v11 = 8.;
+v8 = 2.;
+v10 = 2.;
+v7 = 4.;
+v6 = 8.;
+v29 = 10.;
+v5 = 2.;
+v28 = 5.;
+v4 = 3.;
+v27 = 6.;
+v3 = 2.;
+v26 = 7.;
+v2 = 4.;
+v25 = 3.;
+v1 = 8.;
+v24 = 3.;
+v23 = 2.;
+v22 = 4.;
+v21 = 8.;
+v20 = 2.;
+code_phases:  loopseq;
+
+def operator P3 :
+gate GATE_TYPE_1 gate_1;gate GATE_TYPE_1 gate_2;gate GATE_TYPE_1 gate_3;gate GATE_TYPE_1 gate_4;
+v19 = 8.;
+v30 = 12.;
+v18 = 2.;
+v17 = 4.;
+v16 = 8.;
+R = 1.;
+v15 = 9.;
+v14 = 7.;
+v13 = 6.;
+v12 = 4.;
+v9 = 9.;
+v11 = 8.;
+v8 = 8.;
+v10 = 2.;
+v7 = 4.;
+v6 = 8.;
+v29 = 13.;
+v5 = 4.;
+v28 = 10.;
+v4 = 5.;
+v27 = 2.;
+v3 = 4.;
+v26 = 3.;
+v2 = 6.;
+v25 = 7.;
+v1 = 10.;
+v24 = 7.;
+v23 = 2.;
+v22 = 6.;
+v21 = 5.;
+v20 = 10.;
+code_phases:  loopseq;
+
+def operator P2 :
+gate GATE_TYPE_1 gate_1;gate GATE_TYPE_1 gate_2;gate GATE_TYPE_1 gate_3;gate GATE_TYPE_1 gate_4;
+v19 = 2.;
+v30 = 16.;
+v18 = 2.;
+v17 = 5.;
+v16 = 8.;
+R = 1.;
+v15 = 10.;
+v14 = 7.;
+v13 = 4.;
+v12 = 6.;
+v9 = 9.;
+v11 = 8.;
+v8 = 8.;
+v10 = 2.;
+v7 = 4.;
+v6 = 8.;
+v29 = 8.;
+v5 = 6.;
+v28 = 2.;
+v4 = 7.;
+v27 = 10.;
+v3 = 6.;
+v26 = 4.;
+v2 = 8.;
+v25 = 5.;
+v1 = 12.;
+v24 = 7.;
+v23 = 10.;
+v22 = 6.;
+v21 = 5.;
+v20 = 10.;
+code_phases:  loopseq;
+
+def operator P1 :
+gate GATE_TYPE_1 gate_1;gate GATE_TYPE_1 gate_2;gate GATE_TYPE_1 gate_3;gate GATE_TYPE_1 gate_4;
+v19 = 10.;
+v30 = 18.;
+v18 = 7.;
+v17 = 6.;
+v16 = 8.;
+R = 1.;
+v15 = 9.;
+v14 = 7.;
+v13 = 6.;
+v12 = 12.;
+v9 = 7.;
+v11 = 10.;
+v8 = 8.;
+v10 = 5.;
+v7 = 4.;
+v6 = 8.;
+v29 = 7.;
+v5 = 8.;
+v28 = 6.;
+v4 = 9.;
+v27 = 3.;
+v3 = 8.;
+v26 = 2.;
+v2 = 10.;
+v25 = 6.;
+v1 = 14.;
+v24 = 7.;
+v23 = 4.;
+v22 = 3.;
+v21 = 5.;
+v20 = 10.;
+code_phases:  loopseq;
+
+
+
+def operator P5 :
+gate GATE_TYPE_1 gate_1;gate GATE_TYPE_1 gate_2;gate GATE_TYPE_1 gate_3;gate GATE_TYPE_1 gate_4;
+R = 1.;
+v19 = 4.;
+v30 = 16.;
+v18 = 2.;
+v17 = 5.;
+v16 = 9.;
+R = 1.;
+v15 = 7.;
+v14 = 7.;
+v13 = 4.;
+v12 = 6.;
+v9 = 9.;
+v11 = 8.;
+v8 = 3.;
+v10 = 2.;
+v7 = 4.;
+v6 = 8.;
+v29 = 8.;
+v5 = 6.;
+v28 = 2.;
+v4 = 7.;
+v27 = 10.;
+v3 = 6.;
+v26 = 7.;
+v2 = 8.;
+v25 = 5.;
+v1 = 12.;
+v24 = 7.;
+v23 = 8.;
+v22 = 6.;
+v21 = 5.;
+v20 = 10.;
+code_phases:  loopseq;
+
+def media GATE_TYPE_1 :
+sampp;
+datatype_1 = 1.;
+
+def architecture main_archi 534,328:
+operators:
+ P1 P1 @153,32;
+ P2 P2 @120,280;
+ P3 P3 @421,244;
+ P4 P4 @360,40;
+ P5 P5 @40,40;
+medias:
+ GATE_TYPE_1 L1_2 no_broadcast @-36,273;
+ GATE_TYPE_1 L1_3 no_broadcast @218,220;
+ GATE_TYPE_1 L2_3 no_broadcast @226,317;
+ GATE_TYPE_1 L3_4 no_broadcast @280,160;
+ GATE_TYPE_1 L1_5 no_broadcast @-31,144;
+ GATE_TYPE_1 L4_5 no_broadcast @152,148;
+ GATE_TYPE_1 L1_4 no_broadcast @73,232;
+ GATE_TYPE_1 L1_6 no_broadcast @-25,198;
+ GATE_TYPE_1 L1_7 no_broadcast @369,193;
+ GATE_TYPE_1 L1_8 no_broadcast @231,81;
+connections:
+ P1.gate_1 L1_2;
+ P1.gate_2 L1_3;
+ P1.gate_3 L1_5;
+ P1.gate_4 L1_8;
+ P5.gate_1 L1_5;
+ P2.gate_1 L1_2;
+ P2.gate_2 L2_3;
+ P2.gate_3 L1_6;
+ P2.gate_4 L1_7;
+ P3.gate_1 L2_3;
+ P3.gate_2 L3_4;
+ P3.gate_3 L1_3;
+ P3.gate_4 L1_4;
+ P4.gate_2 L3_4;
+ P4.gate_1 L4_5;
+ P4.gate_3 L1_7;
+ P4.gate_4 L1_8;
+ P5.gate_2 L4_5;
+ P5.gate_3 L1_4;
+ P5.gate_4 L1_6;
+
+
+# Main Algorithm / Main Architecture
+main algorithm main_algo_m ;
+main architecture main_archi;
+
+# Extra durations
+
+# Software components
+
+# Constraints

@@ -1,0 +1,5 @@
+DOCUMENT = grammar
+TABLEOFCONTENT = yes
+BIBLIOGRAPHY = no
+BIBLIOGRAPHYFILE =
+EXTRANEEDED = conventions.tex parserexpression.tex parser.tex

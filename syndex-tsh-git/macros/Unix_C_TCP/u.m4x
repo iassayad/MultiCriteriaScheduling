@@ -1,0 +1,142 @@
+dnl (c)INRIA 2001
+divert(-1)
+# SynDEx v5 generic executive kernel, adapted for C on Unix Workstations.
+
+ifdef(`syndex.m4x_already_included',,`errprint(
+__file__:__line__: m4: syndex.m4x must be included before __file__!
+)m4exit(1)')
+
+ifdef(  __file__`_already_included',`error_(`already included')m4exit(1)',
+`define(__file__`_already_included')')
+
+# ----------------------------------------------------------------------------
+# This file defines all TARGET LANGUAGE DEPENDENT macros (prefixed by `basic')
+# which customize the generic executive macros defined in the syndex.m4x file.
+# SynDEx generates for each processor one macro-executive file starting with a
+# `processor_' macro taking as argument the processor type, which is stored in
+# the `processorType_' macro, and used to include the processorType_.m4x file.
+
+include(C.m4x)divert(-1)
+
+# Test have been successfully done with gcc on the following architectures:
+# PC  hosttype=i386        under Linux(2.0.36)
+# SUN hosttype=sun4        under Solaris(5.6)
+# DEC hosttype=alpha       under OSF1(V4.0)
+# HP  hosttype=hp9000s700  under HP-UX(B.10.20 9000/782)
+
+# WARNING:
+# This implementation uses fork() for executing the communication sequences
+# in parallel with the computation sequence (main), which requires the use
+# of shared-memory for sharing data between the sequences.
+# The size of the shared-memory is limited on SUN to 1 Mega-bytes.
+# This limitation could be avoided by using POSIX threads which share the
+# static data, but POSIX threads are not available on all workstations,
+# whereas fork() and shared-memory are available everywhere.
+
+###############
+# SYNCHRONIZERS
+# To synchronize main (priority=0) and communication sequences (priority=1).
+
+# ----------------
+# semaphores_(...) allocate and initialize the list of named semaphores
+def(`semaphores_', `define(`SynDExMulti')
+#include <sys/types.h> /* for everybody */
+#include <sys/ipc.h>   /* for semaphores and shared memory */
+#include <sys/sem.h>   /* for semaphores: semget semctl */
+#include <sys/shm.h>   /* for shared memory: shmget shmat shmdt shmctl */
+#include <sys/wait.h>  /* for wait */
+
+`#define' NSEMS $# /* number of semaphores */dnl
+'define(`number_',`ifelse($1,,,`
+dnl allocate an index to each semaphore
+`#define $1 'decr($#)`'number_(shift($*))')')`
+number_($*)
+
+int sems_id_; /* semaphores array identifier, initialized by main */
+int shms_id_; /* shared memory identifier, initialized by main */
+
+/* Precede(i) signals the i-th semaphore: */
+void Precede(int i){
+  struct sembuf s;
+  s.sem_num=i; s.sem_op=+1; s.sem_flg=0;
+  semop(sems_id_,&s,1);
+}
+/* Succede(i) waits until the i-th semaphore is signaled: */
+void Succede(int i){
+  struct sembuf s;
+  s.sem_num=i; s.sem_op=-1; s.sem_flg=0;
+  semop(sems_id_,&s,1);
+}
+
+define(`sp_struct_opened',1)
+/* Data buffers are grouped in the sp structure allocated in a memory */
+/* shared between the main process and the communication process: */
+define(`basicAlloc_', `_($'`1_type_ _$'`1[$'`1_size_];)
+`#define' $'`1 sp->_$'`1')dnl
+dnl This structure is opened by `semaphores_' (as signaled by sp_struct_opened)
+dnl It is then closed by first of `Chrono_' or `TCP_shared_'
+typedef struct { /* data shared between main and com_thread */
+indent_(+)')
+
+# ---------
+def(`Pre0_', `_(Precede($1);)')
+# ---------
+def(`Pre1_', `_(Precede($1);)')
+# ---------
+def(`Suc0_', `_(Succede($1);)')
+# ---------
+def(`Suc1_', `_(Succede($1);)')
+
+
+###############
+# MAIN SEQUENCE
+
+# ------------
+# basicMain_()
+define(`basicMain_', `dnl
+_(int main(int argc, char* argv[]) { /* for link with C runtime boot */)dnl
+ifdef(`SynDExMulti', `
+  /* setup IPC resources */
+  sems_id_=semget(IPC_PRIVATE,NSEMS,0600|IPC_CREAT);
+  if(sems_id_<0){perror("semget");return 1;}
+  shms_id_=shmget(IPC_PRIVATE,sizeof(shmemory),0600|IPC_CREAT);
+  if(shms_id_<0){perror("shmget");return 2;}
+  sp=(shmemory*)shmat(shms_id_,NULL,0);
+  if(sp==(shmemory*)-1){perror("shmat");return 3;}
+  /* End of IPC initializations */')dnl
+')
+
+# ---------------
+# basicEndmain_()
+define(`basicEndmain_', `dnl
+ifdef(`SynDExMulti', `dnl
+_(/* cleanup IPC resources */)
+  shmdt((char*)sp);
+  shmctl(shms_id_,  IPC_RMID,0);
+  semctl(sems_id_,0,IPC_RMID,0);
+')dnl
+_(`  'return 0;)dnl
+_(} /* end of main */)')
+
+# ------------------------
+# spawn_thread_(mediaName) ; spawn the pseudo-parallel execution of a com.seq.
+def(`spawn_thread_', `dnl
+_(if(fork()==0) return com_thread_$1(argv);)')
+
+# -----------------------
+# basicThread_(mediaName)
+define(`basicThread_', `dnl
+_(int com_thread_$1(char* argv[]) { /* start of communication sequence */)')
+
+# --------------------------
+# basicEndthread_(mediaName)
+define(`basicEndthread_', `dnl
+_(`  'return 0;)dnl
+_(} /* end of com_thread_$1 */)')
+
+# --------------------------
+# wait_endthread_(mediaName) ; wait for com.seq. thread to terminate
+def(`wait_endthread_', `dnl
+_({ int status; wait(&status); } /* wait for com_thread_$1() end */)')
+
+divert`'dnl---------------------- end of file ----------------------

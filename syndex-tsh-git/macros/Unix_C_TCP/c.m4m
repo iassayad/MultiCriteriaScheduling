@@ -1,0 +1,21 @@
+dnl (c)INRIA 2001
+divert(-1)
+# SynDEx v5 Makefile generator for uniprocessor
+
+ifdef(`syndex.m4m_already_included',,`errprint(
+__file__:__line__: m4: syndex.m4m must be included before __file__!
+)m4exit(1)')
+
+# ------------------------------------------------------------------------
+# When this file is loaded, by the processor_ macro defined in syndex.m4m,
+# the macro appli_() expands to the name of the application, and
+# the macro procr_() expands to the name of a processor (of type C).
+
+divert`'dnl ------------------------------------------------------------
+procr_ : procr_.c $(procr_.libs)
+	$(CC) $(CFLAGS) $^ -lm -o $@
+procr_.c : procr_.m4 syndex.m4x C.m4x appli_.m4x
+	$(M4) $< >$@
+clean ::
+	$(RM) procr_ procr_.c
+dnl -------------------------- end of file -----------------------------

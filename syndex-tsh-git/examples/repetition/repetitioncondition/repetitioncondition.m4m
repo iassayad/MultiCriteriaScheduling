@@ -1,0 +1,11 @@
+dnl (c)INRIA 2001
+dnl
+dnl make specific macros: internet hostnames of processors
+dnl
+dnl root_hostname_ is substituted by default by the current hostname:
+dnl                you do not need to, and should not, redefine it.
+dnl p_hostname_ must be substituted by the name of a workstation granting rsh
+dnl             requests from root_hostname_; it is substituted by default
+dnl             simply by `p'; redefine it if needed.
+define(`P1_hostname_', tiersen)dnl
+

@@ -1,0 +1,15 @@
+dnl (c)INRIA 2004
+divert(-1)
+# SynDEx v6 generic fault tolerant executive macros definitions (fault tolerant executive generator),
+# relying on processor-specific or media-specific macros,
+# see <type>.m4x for macros specific to processor or media type <type>.
+
+###############
+# CLOCK SYNCHRONIZERS
+# To synchronize processors clock
+
+# -----
+# clock_synchronisation 
+define(`clock_synchronisation_',`;')
+
+divert`'dnl ---------------------- End of file -------------------------

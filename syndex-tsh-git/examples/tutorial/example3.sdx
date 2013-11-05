@@ -1,0 +1,44 @@
+syndex_version : "6.6.1"
+
+# Libraries
+
+# Algorithms
+def algorithm calc  200,200:
+ ? int[1] a 1 @8,8;
+ ? int[1] b 2 @8,36;
+ ! int[1] o 1 @170,8;
+
+def sensor input  200,200:
+ ! int[1] o 1 @170,8;
+
+def actuator output  200,200:
+ ? int[1] i 1 @8,8;
+
+def memory calcPrec [1..1] <X> 200,200:
+ ? int[1] x 1 @8,8;
+ ! int[1] x 1 @170,8;
+
+def algorithm AlgorithmMain  344,160:
+conditions: true;
+references:
+ output  out1 @339,185;
+ input  in1 @60,199;
+ calc  calc @207,185;
+ calcPrec<0>  calcPrec @195,113;
+dependences:
+ strong_precedence_data in1.o -> calc.b;
+ strong_precedence_data calc.o -> out1.i;
+ strong_precedence_data calc.o -> calcPrec.x;
+ strong_precedence_data calcPrec.x -> calc.a;
+
+
+# Architectures
+
+# Main Algorithm / Main Architecture
+main algorithm AlgorithmMain ;
+
+# Extra durations
+
+# Software components
+
+# Constraints

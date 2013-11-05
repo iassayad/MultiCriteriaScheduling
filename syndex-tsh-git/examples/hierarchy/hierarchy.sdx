@@ -1,0 +1,131 @@
+syndex_version : "6.6.0"
+
+# Libraries
+include "int.sdx";
+include "u.sdx";
+
+# Algorithms
+def algorithm A  307,106:
+ ? int[1] a 1 @5,5;
+ ? int[1] x 2 @6,76;
+ ! int[1] x 1 @275,37;
+conditions: true;
+references:
+ int/Arit_add<1> add @118,17;
+dependences:
+ strong_precedence_data a -> add.a;
+ strong_precedence_data x -> add.b;
+ strong_precedence_data add.o -> x;
+
+def algorithm B  363,237:
+ ? int[1] a 1 @-20,20;
+ ? int[1] b 2 @-18,152;
+ ! int[1] o 1 @296,109;
+conditions: true;
+references:
+ int/cst<{0}> zero @-27,74;
+ int/cst<{1}> un @-22,187;
+ A A1 @102,41;
+ A A2 @103,123;
+ int/Arit_add<1> add @188,82;
+dependences:
+ strong_precedence_data a -> A1.a;
+ strong_precedence_data zero.o -> A1.x;
+ strong_precedence_data b -> A2.a;
+ strong_precedence_data un.o -> A2.x;
+ strong_precedence_data A2.x -> add.b;
+ strong_precedence_data A1.x -> add.a;
+ strong_precedence_data add.o -> o;
+
+def algorithm C  389,201:
+ ? int[1] a 1 @5,5;
+ ? int[1] b 2 @4,83;
+ ? int[1] c 3 @5,169;
+ ! int[1] o 1 @349,87;
+conditions: true;
+references:
+ B B1 @120,21;
+ B B2 @122,102;
+ int/Arit_add<1> add @225,57;
+dependences:
+ strong_precedence_data a -> B1.a;
+ strong_precedence_data b -> B1.b;
+ strong_precedence_data c -> B2.b;
+ strong_precedence_data b -> B2.a;
+ strong_precedence_data B1.o -> add.a;
+ strong_precedence_data B2.o -> add.b;
+ strong_precedence_data add.o -> o;
+
+def algorithm Main  266,208:
+conditions: true;
+references:
+ int/input<1> i1 @31,34;
+ int/input<1> i2 @30,90;
+ int/input<1> i3 @31,158;
+ int/output<1> o @228,76;
+ C C @129,75;
+dependences:
+ strong_precedence_data i1.o -> C.a;
+ strong_precedence_data i2.o -> C.b;
+ strong_precedence_data i3.o -> C.c;
+ strong_precedence_data C.o -> o.i;
+
+
+# Architectures
+def architecture architest 345,161:
+operators:
+ u/U root @59,94;
+ u/U ecu1 @300,94;
+ main operator root;
+medias:
+ u/TCP eth broadcast @189,106;
+connections:
+ ecu1.x eth;
+ root.x eth;
+
+
+# Main Algorithm / Main Architecture
+main algorithm Main ;
+main architecture architest;
+
+# Extra durations
+extra_durations_operator u/U :
+C = 14;
+extra_durations_media u/TCP :
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+
+# Software components
+software_component onRoot : [\\Main\i1] [\\Main\i2] [\\Main\i3] ;
+
+# Constraints
+absolute constraint : onRoot on architest.root ;
+relative constraint : disjunction xcs1 xsc2 xsc3;

@@ -1,0 +1,274 @@
+dnl (c)INRIA 2001
+divert(-1)
+# SynDEx v5 generic executive kernel, customization for TCP communications
+
+ifdef(`syndex.m4x_already_included',,`errprint(
+__file__:__line__: m4: syndex.m4x must be included before __file__!
+)m4exit(1)')
+
+ifelse(lang_,`C',,`error_(`lang_=C expected, not lang_='lang_)m4exit(1)')
+
+ifdef(  __file__`_already_included',`error_(`already included : '__file__)m4exit(1)',
+`define(__file__`_already_included')')
+
+# -----------------------------------------------------------------------------
+# This file defines all TARGET MEDIA DEPENDENT macros (prefixed by <mediaType>)
+# which customize the generic executive macros defined in the syndex.m4x file.
+# SynDEx generates for each processor one macro-executive file starting with a
+# `processor_' macro taking as argument the processor type, which is stored in
+# the `processorType_' macro, and used to include the processorType_.m4x file.
+# Moreover each communication sequence starts with a `thread_' macro taking as
+# argument the communication media type, which is stored in the `mediaType_'
+# macro, and used to include the mediaType_.m4x file.
+
+# Test have been successfully done with gcc on the following architectures:
+# PC  hosttype=i386        under Linux(2.0.36 POSIX)
+# SUN hosttype=sun4        under Solaris(5.6)
+# DEC hosttype=alpha       under OSF1(V4.0)
+# ?SGI hosttype=iris4d      under IRIX(6.2)
+# ?HP  hosttype=hp9000s700  under HP-UX(B.10.20 9000/780)
+
+# WARNING:
+# This Unix implementation uses "rsh" for the booting process, which requires
+# that each host accepts rsh from the booting host (SynDEx "root"); this is
+# usually done by adding a "rootHostName userLoginName" line in the
+# $HOME/.rhost file of each remote host.
+
+# WARNING:
+# This TCP implementation of interprocessor communications limits the number
+# of processor to the number of sockets that may be created for a process,
+# which is 64 on SUN, -3 for stdin, stdout and stderr, minus those needed
+# for i/o operations.
+# --------------------------------------------------------------------------
+
+########################
+# COMMUNICATION SEQUENCE
+
+# -----------
+# TCP_shared_(mediaName,procrNames)
+define(`TCP_shared_', `ifdef(`TCP_shared_done_',,`define(`TCP_shared_done_')dnl
+dnl `typedef struct {' opened by `semaphores_'
+indent_(-)
+ifdef(`sp_struct_opened',`} shmemory; /* end of shared data */
+shmemory* sp; /* the mapped base address of the shared memory area */
+undefine(`sp_struct_opened')')
+
+
+/* support for workstations with different byte orders */
+void brev2(int *data, int items) { /* b1b2 -> b2b1 */
+ do { *data = *data<<8&0xff00 | *data>>8&0x00ff;
+   data++;
+ } while(--items);
+}
+void brev4(int *data, int items) { /* b1b2b3b4 -> b4b3b2b1 */
+ do { *data = *data<<24 | *data<<8&0xff0000 | *data>>8&0xff00 | *data>>24&0xff;
+   data++;
+ } while(--items);
+}
+void brev8(int *data, int items) { /* 12345678 -> 78563412 */
+  do { int t =
+      *data<<24 | *data<<8&0xff0000 | *data>>8&0xff00 | *data>>24&0xff;
+    data++; data[-1] =
+      *data<<24 | *data<<8&0xff0000 | *data>>8&0xff00 | *data>>24&0xff;
+    *data++ = t;
+  } while(--items);
+}
+
+#ifdef DEBUG
+#define INFO(x) printf x
+#else
+#define INFO(x)
+#endif
+
+#include <stdio.h>      /* for popen, pclose, sprintf */
+#include <stdlib.h>     /* for system */
+#include <string.h>     /* for strcpy */
+#include <sys/socket.h> /* for everybody */
+#include <netdb.h>      /* for gethostname and setsockopt */
+#include <netinet/tcp.h>/* for TCP_NODELAY */
+#include <netinet/in.h> /* for internet sockets */
+#include <arpa/inet.h>  /* for inet_addr and inet_ntoa */
+#include <unistd.h>     /* for read and write */
+')'
+
+ifdef(`processors_failures_',
+int number_of_procs_fails = npf_;
+int number_of_media_fails = nmf_;
+
+reliable_send_proc_()
+
+reliable_receive_proc_())
+)
+
+# procrIndex_(procrName)
+define(`procrIndex_', `lindex($1,shift(shift(threadArgs_)))')
+
+# --------
+# TCP_ini_(mediaName,procrNames)
+define(`TCP_ini_', `
+`#define' MYID_`'mediaName_ procrIndex_(processorName_) /* my index on $1 bus */
+`#define' NHOSTS_`'mediaName_ eval($#-1) /* number of procrs connected on $1 bus */
+  int sd[NHOSTS_`'mediaName_]; /* socket descriptors */
+  struct sockaddr_in saddr; /* socket address */
+
+  /* support for workstations with different byte orders */
+`#define' BREVKEY 0x01234567
+  int brev[NHOSTS_`'mediaName_]; /* byte-reverse when different byte orders */
+
+  int len, n;
+  char *pp; /* packet pointer */
+  int i, j;
+  struct hostpnx {
+    u_short port;  /* TCP socket address  */
+    char name[42]; /* internet hostname   */
+    char exec[20]; /* executable filename */
+  };')
+
+
+define(`TCP_openListeningSocket_',`
+  /* open a TCP socket for accepting connections */
+  sd[MYID_`'mediaName_] = socket(PF_INET, SOCK_STREAM, 0);
+  saddr.sin_family = AF_INET;
+  saddr.sin_port = 0;  /* let the system allocate a TCP port */
+  saddr.sin_addr.s_addr = INADDR_ANY; /* accept connexions from anywhere */
+  bind(sd[MYID_`'mediaName_], (struct sockaddr*)&saddr, sizeof(saddr));
+  listen(sd[MYID_`'mediaName_], 1);
+  brev[MYID_`'mediaName_] = BREVKEY;')
+
+
+define(`TCP_closeListeningSocket_', `
+  for(i=0; i<NHOSTS_`'mediaName_; i++) brev[i] ^= BREVKEY; /* compare byte-orders */
+  /* prevent TCP from delaying uncomplete packets: */
+  for(i=0, j=getprotobyname("tcp")->p_proto, n=1; i<NHOSTS_`'mediaName_; i++)
+    setsockopt(sd[i], j, TCP_NODELAY, (char*)&n, sizeof(int));
+  close(sd[MYID_`'mediaName_]); /* close my listening socket */
+  /* End of network initializations */
+')
+
+# --------------------------------------------------
+# Forward-loader
+# These macros do not yet support fully heterogeneous architectures,
+# as described in syndex.m4x, but support an "homogeneous" Unix-TCP/IP
+# network of heterogeneous workstations (PC, SUN, DEC, etc.)
+
+# ----------------------
+# mediaType_()_loadDnto_(srceMedia {,procrName})
+define(`TCP_loadDnto_',`dnl
+  /* IamRoot: I start all other workstations */
+  static struct hostpnx host[NHOSTS_`'mediaName_] = {dnl
+nodes(shift(shift(threadArgs_)))dnl
+'define(`nodes', `ifelse($1,,,`dnl
+_(`  '{0, "ifdef($1`_hostname_',`$1_hostname_',`$1')", "$1"})dnl
+ifelse($2,,,`,')nodes(shift($@))')')`
+  };
+  char command[200];
+  char CWD[80]; /* HOME-relative Current Working Directory */
+  { FILE *home, *pwd; char c;
+    home = popen("cd;/bin/pwd","r"); /* absolute home path, \n at end */
+    pwd  = popen(   "/bin/pwd","r"); /* present working directory */
+'changequote([[,]])[[changequote([[,]])dnl
+    while((c = getc(home)) == getc(pwd) && c != '\n');
+    fscanf(pwd, "%79s", CWD);
+    pclose(home); pclose(pwd);
+    if(c != '\n'){
+      system("echo \".=`/bin/pwd` not under HOME=`cd;/bin/pwd`\" >&2");
+      exit(-1);
+    }dnl
+changequote]]changequote`
+  }
+TCP_openListeningSocket_
+  /* retrieve the address of the listening TCP socket */
+  len = sizeof(saddr);
+  getsockname(sd[MYID_`'mediaName_], (struct sockaddr*)&saddr, &len);
+  host[MYID_`'mediaName_].port = saddr.sin_port;
+  gethostname(host[MYID_`'mediaName_].name, sizeof(host[MYID_`'mediaName_].name));
+  for(i=0; i<NHOSTS_`'mediaName_; i++) if(i!=MYID_`'mediaName_) { /* start each other workstation */
+'changequote([[,]])[[changequote([[,]])dnl
+    sprintf(command, "sh -c '\
+H=%s;test -x $H.mnt||(rsh $H ln -s /bin/true ./%s/$H.mnt;\
+test -x $H.mnt||ln -s /bin/false $H.mnt);./$H.mnt'",
+            host[i].name, CWD);dnl
+changequote]]changequote`
+    if(system(command)) /* if remote host does not share (mount) HOME, */
+      /* rcp executable in same directory (tar creates it if needed), */
+      sprintf(command, "(cd;tar cf - %s/%s)|rsh %s tar xf -\\;",
+              CWD, host[i].exec, host[i].name);
+      /* otherwise executable is already available on remote host; */
+    else sprintf(command, "rsh %s -n ", host[i].name);
+    /* then rexec executable in same directory, with root name and port */
+    sprintf(command+strlen(command), "cd %s\\;./%s %s %d",
+            CWD, host[i].exec, host[MYID_`'mediaName_].name, ntohs(host[MYID_`'mediaName_].port));
+    INFO(("%s\n", command)); /* trace the command line */
+    if(fork()==0) return system(command); /* execute it */
+    len = sizeof(saddr); /* wait for connexion: */
+    sd[i] = accept(sd[MYID_`'mediaName_], (struct sockaddr*)&saddr, &len);
+    read(sd[i], (char*)(brev+i), 4); /* receive byte-order */
+    /* send all listening ports already collected */
+    for(j=0; j<i; j++) if(j!=MYID_`'mediaName_) write(sd[i], &host[j], sizeof(host[j]));
+    read(sd[i], (char*)&host[i].port, 2); /* receive listening port */
+    INFO((">>> %s %d\n", host[i].name, ntohs(host[i].port)));
+  }
+  /* broadcast byte-orders */
+  for(i=0; i<NHOSTS_`'mediaName_; i++) if(i!=MYID_`'mediaName_) write(sd[i], (char*)brev, sizeof(brev));
+TCP_closeListeningSocket_')
+
+# ----------------------
+# mediaType_()_loadFrom_(procrName {,destMedia})
+define(`TCP_loadFrom_', `
+`#define' BOOTID procrIndex_($1) /* boot processor index */
+  struct hostent *hp;
+  struct hostpnx hpn;dnl
+TCP_openListeningSocket_()
+  /* IamNotRoot: get root address from command line arguments */
+  hp = gethostbyname(argv[1]); /* get root name then address: */
+  bcopy(hp->h_addr, (char*)&saddr.sin_addr.s_addr, sizeof(struct in_addr));
+  saddr.sin_port = htons(atoi(argv[2])); /* get root listening port */
+  saddr.sin_family = AF_INET;
+  /* create a TCP socket and connect it to root */
+  sd[BOOTID] = socket(PF_INET, SOCK_STREAM, 0);
+  connect(sd[BOOTID], (struct sockaddr*)&saddr, sizeof(saddr));
+  write(sd[BOOTID], (char*)(brev+MYID_`'mediaName_), 4); /* send my byte order */
+  for(i=0; i<MYID_`'mediaName_; i++) if(i!=BOOTID) { /* for each of my servers: */
+    saddr.sin_family = AF_INET;
+    read(sd[BOOTID], &hpn, sizeof(hpn)); /* root sends server port and name */
+    saddr.sin_port = hpn.port; /* retrieve port */
+    hp = gethostbyname(hpn.name); /* retrieve name, then address: */
+    bcopy(hp->h_addr, (char*)&saddr.sin_addr.s_addr, sizeof(struct in_addr));
+    /* create a TCP socket and connect it to the server */
+    sd[i] = socket(PF_INET, SOCK_STREAM, 0);
+    connect(sd[i], (struct sockaddr*)&saddr, sizeof(saddr));
+  }
+  /* send to root my listening port address */
+  len = sizeof(saddr);
+  getsockname(sd[MYID_`'mediaName_], (struct sockaddr*)&saddr, &len);
+  write(sd[BOOTID], (char*)&saddr.sin_port, 2);
+  /* accept connexions from my clients */
+  for(i=MYID_`'mediaName_+1; i<NHOSTS_`'mediaName_; i++) if(i!=BOOTID)
+    sd[i] = accept(sd[MYID_`'mediaName_], (struct sockaddr*)&saddr, &len);
+  /* receive from root all collected byte-orders */
+  read(sd[BOOTID], (char*)brev, sizeof(brev));
+TCP_closeListeningSocket_')
+
+
+# ---------
+# TCP_send_(1bufferName, 2senderType,3senderName {, receiverNames})
+define(`TCP_send_', `ifelse($4,,,`dnl broadcast to each receiver:
+_(write(sd[procrIndex_($4)], (char*)$1, $1_size_*sizeof($1_type_));)dnl
+TCP_send_($1,$2,$3, shift(shift(shift(shift($@)))))')')
+
+# ---------
+# TCP_recv_(1bufferName, 2senderType,3senderName {, receiverNames})
+define(`TCP_recv_', `pushdef(`pI',procrIndex_($3))dnl
+_(for(pp=(char*)$1, len=$1_size_*sizeof($1_type_); len!=0; pp+=n, len-=n))dnl
+_(  n = read(sd[pI], pp, len);)dnl
+ifelse($1_type_()_size_,1,, `dnl
+_(if(brev[pI]) brev`'$1_type_()_size_`'((int*)$1, $1_size_);)')dnl
+popdef(`pI')')
+
+
+# ---------
+# TCP_sync_(1bufferType, 2bufferSize)
+define(`TCP_sync_')dnl nothing worth to do
+
+
+divert`'dnl ----------------- end of file -----------------------------

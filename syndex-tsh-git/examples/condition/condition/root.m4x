@@ -1,0 +1,3 @@
+dnl (c)INRIA 2001
+dnl A symbolic link would be better, but Win95 does not support symbolic links.
+include(condition.m4m)

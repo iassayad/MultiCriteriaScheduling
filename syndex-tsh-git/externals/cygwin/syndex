@@ -1,0 +1,3 @@
+set TCL_LIBRARY=bin\tcl
+set TK_LIBRARY=bin\tk
+bin\syndex -bin bin -libs libs %1

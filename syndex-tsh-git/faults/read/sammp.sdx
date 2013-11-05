@@ -1,0 +1,70 @@
+syndex_version : "6.7.0"
+application description : ""
+
+# Libraries
+include "int.sdx";
+include "u.sdx";
+
+# Algorithms
+def algorithm addition  :
+ ? int[1] a 1 ;
+ ? int[1] b 2 ;
+ ! int[1] o 1 ;
+code_phases:  loopseq;
+description : "Random Operation"
+
+def sensor sensor2  :
+ ! int[1] o 1 ;
+description : "Random Operation"
+
+def algorithm algo  460,251:
+conditions: true;
+references:
+ int/input<1>  input1 @162,122;
+ sensor2  input2 @162,122;
+ addition  add @299,125;
+ int/output<1>  output @429,125;
+dependences:
+ strong_precedence_data input1.o -> add.a;
+ strong_precedence_data input2.o -> add.b;
+ strong_precedence_data add.o -> output.i;
+code_phases:  loopseq;
+
+
+# Architectures
+def architecture archi 387,232:
+operators:
+ u/U root @122,148;
+ u/U louve @348,151;
+ main operator root;
+medias:
+ u/TCP L13 broadcast @245,136;
+connections:
+ root.y L13;
+ louve.y L13;
+
+
+# Main Algorithm / Main Architecture
+main algorithm algo ;
+main architecture archi;
+
+# Extra durations
+extra_durations_operator u/U :
+addition = 1.;
+sensor2 = 1.;
+
+# Software components
+
+software_component other :
+[\\algo\input1,attach_ref]
+[\\algo\input2,attach_ref]
+[\\algo\output,attach_ref]
+;
+
+software_component other1 :
+[\\algo\add,attach_ref]
+;
+
+# Constraints
+absolute constraint : other1 on archi.louve ;	
+absolute constraint : other on archi.root ;

@@ -1,0 +1,75 @@
+syndex_version : "6.6.0"
+
+# Libraries
+include "int.sdx";
+include "u.sdx";
+
+# Algorithms
+def algorithm delays  356,225:
+conditions: true;
+references:
+ int/input<1> input @15,106;
+ int/window<1;2> window @161,156;
+ int/delay<{0};1> Z @178,11;
+ int/output<1> outZ @279,11;
+ int/output<1> outZ2 @271,77;
+ int/output<2> outWindow @245,156;
+ int/delay<{-1,2};2> Z2 @176,80;
+dependences:
+ strong_precedence_data window.o -> outWindow.i;
+ strong_precedence_data input.o -> window.i;
+ strong_precedence_data input.o -> Z.i;
+ strong_precedence_data Z.o -> outZ.i;
+ strong_precedence_data Z2.o -> outZ2.i;
+ strong_precedence_data input.o -> Z2.i;
+
+
+# Architectures
+def architecture mono 150,86:
+operators:
+ u/U root @20,20;
+ main operator root;
+medias:
+connections:
+
+
+# Main Algorithm / Main Architecture
+main algorithm delays ;
+main architecture mono;
+
+# Extra durations
+extra_durations_media u/TCP :
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+float = 2;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+bool = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+int = 2;
+
+# Software components
+
+# Constraints

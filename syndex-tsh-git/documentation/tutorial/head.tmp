@@ -1,0 +1,442 @@
+%!PS-Adobe-2.0
+%%Creator: dvips(k) 5.86 Copyright 1999 Radical Eye Software
+%%Title: tutorial.dvi
+%%Pages: 42
+%%PageOrder: Ascend
+%%BoundingBox: 0 0 596 842
+%%DocumentFonts: Times-Roman Times-Bold CMSY10 Times-Italic Helvetica
+%%EndComments
+%DVIPSWebPage: (www.radicaleye.com)
+%DVIPSCommandLine: dvips -z -Pcmz tutorial.dvi -o
+%DVIPSParameters: dpi=600, compressed
+%DVIPSSource:  TeX output 2004.06.06:1921
+%%BeginProcSet: texc.pro
+%!
+/TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
+N}B/A{dup}B/TR{translate}N/isls false N/vsize 11 72 mul N/hsize 8.5 72
+mul N/landplus90{false}def/@rigin{isls{[0 landplus90{1 -1}{-1 1}ifelse 0
+0 0]concat}if 72 Resolution div 72 VResolution div neg scale isls{
+landplus90{VResolution 72 div vsize mul 0 exch}{Resolution -72 div hsize
+mul 0}ifelse TR}if Resolution VResolution vsize -72 div 1 add mul TR[
+matrix currentmatrix{A A round sub abs 0.00001 lt{round}if}forall round
+exch round exch]setmatrix}N/@landscape{/isls true N}B/@manualfeed{
+statusdict/manualfeed true put}B/@copies{/#copies X}B/FMat[1 0 0 -1 0 0]
+N/FBB[0 0 0 0]N/nn 0 N/IEn 0 N/ctr 0 N/df-tail{/nn 8 dict N nn begin
+/FontType 3 N/FontMatrix fntrx N/FontBBox FBB N string/base X array
+/BitMaps X/BuildChar{CharBuilder}N/Encoding IEn N end A{/foo setfont}2
+array copy cvx N load 0 nn put/ctr 0 N[}B/sf 0 N/df{/sf 1 N/fntrx FMat N
+df-tail}B/dfs{div/sf X/fntrx[sf 0 0 sf neg 0 0]N df-tail}B/E{pop nn A
+definefont setfont}B/Cw{Cd A length 5 sub get}B/Ch{Cd A length 4 sub get
+}B/Cx{128 Cd A length 3 sub get sub}B/Cy{Cd A length 2 sub get 127 sub}
+B/Cdx{Cd A length 1 sub get}B/Ci{Cd A type/stringtype ne{ctr get/ctr ctr
+1 add N}if}B/id 0 N/rw 0 N/rc 0 N/gp 0 N/cp 0 N/G 0 N/CharBuilder{save 3
+1 roll S A/base get 2 index get S/BitMaps get S get/Cd X pop/ctr 0 N Cdx
+0 Cx Cy Ch sub Cx Cw add Cy setcachedevice Cw Ch true[1 0 0 -1 -.1 Cx
+sub Cy .1 sub]/id Ci N/rw Cw 7 add 8 idiv string N/rc 0 N/gp 0 N/cp 0 N{
+rc 0 ne{rc 1 sub/rc X rw}{G}ifelse}imagemask restore}B/G{{id gp get/gp
+gp 1 add N A 18 mod S 18 idiv pl S get exec}loop}B/adv{cp add/cp X}B
+/chg{rw cp id gp 4 index getinterval putinterval A gp add/gp X adv}B/nd{
+/cp 0 N rw exit}B/lsh{rw cp 2 copy get A 0 eq{pop 1}{A 255 eq{pop 254}{
+A A add 255 and S 1 and or}ifelse}ifelse put 1 adv}B/rsh{rw cp 2 copy
+get A 0 eq{pop 128}{A 255 eq{pop 127}{A 2 idiv S 128 and or}ifelse}
+ifelse put 1 adv}B/clr{rw cp 2 index string putinterval adv}B/set{rw cp
+fillstr 0 4 index getinterval putinterval adv}B/fillstr 18 string 0 1 17
+{2 copy 255 put pop}for N/pl[{adv 1 chg}{adv 1 chg nd}{1 add chg}{1 add
+chg nd}{adv lsh}{adv lsh nd}{adv rsh}{adv rsh nd}{1 add adv}{/rc X nd}{
+1 add set}{1 add clr}{adv 2 chg}{adv 2 chg nd}{pop nd}]A{bind pop}
+forall N/D{/cc X A type/stringtype ne{]}if nn/base get cc ctr put nn
+/BitMaps get S ctr S sf 1 ne{A A length 1 sub A 2 index S get sf div put
+}if put/ctr ctr 1 add N}B/I{cc 1 add D}B/bop{userdict/bop-hook known{
+bop-hook}if/SI save N @rigin 0 0 moveto/V matrix currentmatrix A 1 get A
+mul exch 0 get A mul add .99 lt{/QV}{/RV}ifelse load def pop pop}N/eop{
+SI restore userdict/eop-hook known{eop-hook}if showpage}N/@start{
+userdict/start-hook known{start-hook}if pop/VResolution X/Resolution X
+1000 div/DVImag X/IEn 256 array N 2 string 0 1 255{IEn S A 360 add 36 4
+index cvrs cvn put}for pop 65781.76 div/vsize X 65781.76 div/hsize X}N
+/p{show}N/RMat[1 0 0 -1 0 0]N/BDot 260 string N/Rx 0 N/Ry 0 N/V{}B/RV/v{
+/Ry X/Rx X V}B statusdict begin/product where{pop false[(Display)(NeXT)
+(LaserWriter 16/600)]{A length product length le{A length product exch 0
+exch getinterval eq{pop true exit}if}{pop}ifelse}forall}{false}ifelse
+end{{gsave TR -.1 .1 TR 1 1 scale Rx Ry false RMat{BDot}imagemask
+grestore}}{{gsave TR -.1 .1 TR Rx Ry scale 1 1 false RMat{BDot}
+imagemask grestore}}ifelse B/QV{gsave newpath transform round exch round
+exch itransform moveto Rx 0 rlineto 0 Ry neg rlineto Rx neg 0 rlineto
+fill grestore}B/a{moveto}B/delta 0 N/tail{A/delta X 0 rmoveto}B/M{S p
+delta add tail}B/b{S p tail}B/c{-4 M}B/d{-3 M}B/e{-2 M}B/f{-1 M}B/g{0 M}
+B/h{1 M}B/i{2 M}B/j{3 M}B/k{4 M}B/w{0 rmoveto}B/l{p -4 w}B/m{p -3 w}B/n{
+p -2 w}B/o{p -1 w}B/q{p 1 w}B/r{p 2 w}B/s{p 3 w}B/t{p 4 w}B/x{0 S
+rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
+
+%%EndProcSet
+%%BeginProcSet: 8r.enc
+% @@psencodingfile@{
+%   author = "S. Rahtz, P. MacKay, Alan Jeffrey, B. Horn, K. Berry",
+%   version = "0.6",
+%   date = "22 June 1996",
+%   filename = "8r.enc",
+%   email = "kb@@mail.tug.org",
+%   address = "135 Center Hill Rd. // Plymouth, MA 02360",
+%   codetable = "ISO/ASCII",
+%   checksum = "119     662    4424",
+%   docstring = "Encoding for TrueType or Type 1 fonts to be used with TeX."
+% @}
+% 
+% Idea is to have all the characters normally included in Type 1 fonts
+% available for typesetting. This is effectively the characters in Adobe
+% Standard Encoding + ISO Latin 1 + extra characters from Lucida.
+% 
+% Character code assignments were made as follows:
+% 
+% (1) the Windows ANSI characters are almost all in their Windows ANSI
+% positions, because some Windows users cannot easily reencode the
+% fonts, and it makes no difference on other systems. The only Windows
+% ANSI characters not available are those that make no sense for
+% typesetting -- rubout (127 decimal), nobreakspace (160), softhyphen
+% (173). quotesingle and grave are moved just because it's such an
+% irritation not having them in TeX positions.
+% 
+% (2) Remaining characters are assigned arbitrarily to the lower part
+% of the range, avoiding 0, 10 and 13 in case we meet dumb software.
+% 
+% (3) Y&Y Lucida Bright includes some extra text characters; in the
+% hopes that other PostScript fonts, perhaps created for public
+% consumption, will include them, they are included starting at 0x12.
+% 
+% (4) Remaining positions left undefined are for use in (hopefully)
+% upward-compatible revisions, if someday more characters are generally
+% available.
+% 
+% (5) hyphen appears twice for compatibility with both ASCII and Windows.
+% 
+/TeXBase1Encoding [
+% 0x00 (encoded characters from Adobe Standard not in Windows 3.1)
+  /.notdef /dotaccent /fi /fl
+  /fraction /hungarumlaut /Lslash /lslash
+  /ogonek /ring /.notdef
+  /breve /minus /.notdef 
+% These are the only two remaining unencoded characters, so may as
+% well include them.
+  /Zcaron /zcaron 
+% 0x10
+ /caron /dotlessi 
+% (unusual TeX characters available in, e.g., Lucida Bright)
+ /dotlessj /ff /ffi /ffl 
+ /.notdef /.notdef /.notdef /.notdef
+ /.notdef /.notdef /.notdef /.notdef
+ % very contentious; it's so painful not having quoteleft and quoteright
+ % at 96 and 145 that we move the things normally found there down to here.
+ /grave /quotesingle 
+% 0x20 (ASCII begins)
+ /space /exclam /quotedbl /numbersign
+ /dollar /percent /ampersand /quoteright
+ /parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+% 0x30
+ /zero /one /two /three /four /five /six /seven
+ /eight /nine /colon /semicolon /less /equal /greater /question
+% 0x40
+ /at /A /B /C /D /E /F /G /H /I /J /K /L /M /N /O
+% 0x50
+ /P /Q /R /S /T /U /V /W
+ /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+% 0x60
+ /quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o
+% 0x70
+ /p /q /r /s /t /u /v /w
+ /x /y /z /braceleft /bar /braceright /asciitilde
+ /.notdef % rubout; ASCII ends
+% 0x80
+ /.notdef /.notdef /quotesinglbase /florin
+ /quotedblbase /ellipsis /dagger /daggerdbl
+ /circumflex /perthousand /Scaron /guilsinglleft
+ /OE /.notdef /.notdef /.notdef
+% 0x90
+ /.notdef /.notdef /.notdef /quotedblleft
+ /quotedblright /bullet /endash /emdash
+ /tilde /trademark /scaron /guilsinglright
+ /oe /.notdef /.notdef /Ydieresis
+% 0xA0
+ /.notdef % nobreakspace
+ /exclamdown /cent /sterling
+ /currency /yen /brokenbar /section
+ /dieresis /copyright /ordfeminine /guillemotleft
+ /logicalnot
+ /hyphen % Y&Y (also at 45); Windows' softhyphen
+ /registered
+ /macron
+% 0xD0
+ /degree /plusminus /twosuperior /threesuperior
+ /acute /mu /paragraph /periodcentered
+ /cedilla /onesuperior /ordmasculine /guillemotright
+ /onequarter /onehalf /threequarters /questiondown
+% 0xC0
+ /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+ /Egrave /Eacute /Ecircumflex /Edieresis
+ /Igrave /Iacute /Icircumflex /Idieresis
+% 0xD0
+ /Eth /Ntilde /Ograve /Oacute
+ /Ocircumflex /Otilde /Odieresis /multiply
+ /Oslash /Ugrave /Uacute /Ucircumflex
+ /Udieresis /Yacute /Thorn /germandbls
+% 0xE0
+ /agrave /aacute /acircumflex /atilde
+ /adieresis /aring /ae /ccedilla
+ /egrave /eacute /ecircumflex /edieresis
+ /igrave /iacute /icircumflex /idieresis
+% 0xF0
+ /eth /ntilde /ograve /oacute
+ /ocircumflex /otilde /odieresis /divide
+ /oslash /ugrave /uacute /ucircumflex
+ /udieresis /yacute /thorn /ydieresis
+] def
+
+%%EndProcSet
+%%BeginProcSet: texps.pro
+%!
+TeXDict begin/rf{findfont dup length 1 add dict begin{1 index/FID ne 2
+index/UniqueID ne and{def}{pop pop}ifelse}forall[1 index 0 6 -1 roll
+exec 0 exch 5 -1 roll VResolution Resolution div mul neg 0 0]/Metrics
+exch def dict begin Encoding{exch dup type/integertype ne{pop pop 1 sub
+dup 0 le{pop}{[}ifelse}{FontMatrix 0 get div Metrics 0 get div def}
+ifelse}forall Metrics/Metrics currentdict end def[2 index currentdict
+end definefont 3 -1 roll makefont/setfont cvx]cvx def}def/ObliqueSlant{
+dup sin S cos div neg}B/SlantFont{4 index mul add}def/ExtendFont{3 -1
+roll mul exch}def/ReEncodeFont{CharStrings rcheck{/Encoding false def
+dup[exch{dup CharStrings exch known not{pop/.notdef/Encoding true def}
+if}forall Encoding{]exch pop}{cleartomark}ifelse}if/Encoding exch def}
+def end
+
+%%EndProcSet
+%%BeginProcSet: special.pro
+%!
+TeXDict begin/SDict 200 dict N SDict begin/@SpecialDefaults{/hs 612 N
+/vs 792 N/ho 0 N/vo 0 N/hsc 1 N/vsc 1 N/ang 0 N/CLIP 0 N/rwiSeen false N
+/rhiSeen false N/letter{}N/note{}N/a4{}N/legal{}N}B/@scaleunit 100 N
+/@hscale{@scaleunit div/hsc X}B/@vscale{@scaleunit div/vsc X}B/@hsize{
+/hs X/CLIP 1 N}B/@vsize{/vs X/CLIP 1 N}B/@clip{/CLIP 2 N}B/@hoffset{/ho
+X}B/@voffset{/vo X}B/@angle{/ang X}B/@rwi{10 div/rwi X/rwiSeen true N}B
+/@rhi{10 div/rhi X/rhiSeen true N}B/@llx{/llx X}B/@lly{/lly X}B/@urx{
+/urx X}B/@ury{/ury X}B/magscale true def end/@MacSetUp{userdict/md known
+{userdict/md get type/dicttype eq{userdict begin md length 10 add md
+maxlength ge{/md md dup length 20 add dict copy def}if end md begin
+/letter{}N/note{}N/legal{}N/od{txpose 1 0 mtx defaultmatrix dtransform S
+atan/pa X newpath clippath mark{transform{itransform moveto}}{transform{
+itransform lineto}}{6 -2 roll transform 6 -2 roll transform 6 -2 roll
+transform{itransform 6 2 roll itransform 6 2 roll itransform 6 2 roll
+curveto}}{{closepath}}pathforall newpath counttomark array astore/gc xdf
+pop ct 39 0 put 10 fz 0 fs 2 F/|______Courier fnt invertflag{PaintBlack}
+if}N/txpose{pxs pys scale ppr aload pop por{noflips{pop S neg S TR pop 1
+-1 scale}if xflip yflip and{pop S neg S TR 180 rotate 1 -1 scale ppr 3
+get ppr 1 get neg sub neg ppr 2 get ppr 0 get neg sub neg TR}if xflip
+yflip not and{pop S neg S TR pop 180 rotate ppr 3 get ppr 1 get neg sub
+neg 0 TR}if yflip xflip not and{ppr 1 get neg ppr 0 get neg TR}if}{
+noflips{TR pop pop 270 rotate 1 -1 scale}if xflip yflip and{TR pop pop
+90 rotate 1 -1 scale ppr 3 get ppr 1 get neg sub neg ppr 2 get ppr 0 get
+neg sub neg TR}if xflip yflip not and{TR pop pop 90 rotate ppr 3 get ppr
+1 get neg sub neg 0 TR}if yflip xflip not and{TR pop pop 270 rotate ppr
+2 get ppr 0 get neg sub neg 0 S TR}if}ifelse scaleby96{ppr aload pop 4
+-1 roll add 2 div 3 1 roll add 2 div 2 copy TR .96 dup scale neg S neg S
+TR}if}N/cp{pop pop showpage pm restore}N end}if}if}N/normalscale{
+Resolution 72 div VResolution 72 div neg scale magscale{DVImag dup scale
+}if 0 setgray}N/psfts{S 65781.76 div N}N/startTexFig{/psf$SavedState
+save N userdict maxlength dict begin/magscale true def normalscale
+currentpoint TR/psf$ury psfts/psf$urx psfts/psf$lly psfts/psf$llx psfts
+/psf$y psfts/psf$x psfts currentpoint/psf$cy X/psf$cx X/psf$sx psf$x
+psf$urx psf$llx sub div N/psf$sy psf$y psf$ury psf$lly sub div N psf$sx
+psf$sy scale psf$cx psf$sx div psf$llx sub psf$cy psf$sy div psf$ury sub
+TR/showpage{}N/erasepage{}N/copypage{}N/p 3 def @MacSetUp}N/doclip{
+psf$llx psf$lly psf$urx psf$ury currentpoint 6 2 roll newpath 4 copy 4 2
+roll moveto 6 -1 roll S lineto S lineto S lineto closepath clip newpath
+moveto}N/endTexFig{end psf$SavedState restore}N/@beginspecial{SDict
+begin/SpecialSave save N gsave normalscale currentpoint TR
+@SpecialDefaults count/ocount X/dcount countdictstack N}N/@setspecial{
+CLIP 1 eq{newpath 0 0 moveto hs 0 rlineto 0 vs rlineto hs neg 0 rlineto
+closepath clip}if ho vo TR hsc vsc scale ang rotate rwiSeen{rwi urx llx
+sub div rhiSeen{rhi ury lly sub div}{dup}ifelse scale llx neg lly neg TR
+}{rhiSeen{rhi ury lly sub div dup scale llx neg lly neg TR}if}ifelse
+CLIP 2 eq{newpath llx lly moveto urx lly lineto urx ury lineto llx ury
+lineto closepath clip}if/showpage{}N/erasepage{}N/copypage{}N newpath}N
+/@endspecial{count ocount sub{pop}repeat countdictstack dcount sub{end}
+repeat grestore SpecialSave restore end}N/@defspecial{SDict begin}N
+/@fedspecial{end}B/li{lineto}B/rl{rlineto}B/rc{rcurveto}B/np{/SaveX
+currentpoint/SaveY X N 1 setlinecap newpath}N/st{stroke SaveX SaveY
+moveto}N/fil{fill SaveX SaveY moveto}N/ellipse{/endangle X/startangle X
+/yrad X/xrad X/savematrix matrix currentmatrix N TR xrad yrad scale 0 0
+1 startangle endangle arc savematrix setmatrix}N end
+
+%%EndProcSet
+%%BeginProcSet: hps.pro
+%!
+/HPSdict 20 dict dup begin/braindeaddistill 50 def/rfch{dup length 1 sub
+1 exch getinterval}bind def/splituri{dup(#)search{exch pop}{()exch}
+ifelse dup(file:)anchorsearch{pop exch pop 3 -1 roll pop false}{pop 3 -1
+roll exch pop true}ifelse}bind def/lookuptarget{exch rfch dup
+/TargetAnchors where{pop TargetAnchors dup 3 -1 roll known{exch get true
+}{pop(target unknown:)print == false}ifelse}{pop pop
+(target dictionary unknown\012)print false}ifelse}bind def/savecount 0
+def/stackstopped{count counttomark sub/savecount exch store stopped
+count savecount sub 1 sub dup 0 gt{{exch pop}repeat}{pop}ifelse}bind def
+/tempstring 256 string def/targetvalidate{1 index dup length 255 gt exch
+dup(/)search{pop pop pop exch pop true exch}{pop}ifelse cvn tempstring
+cvs token pop pop length 0 ne or not}bind def/targetdump-hook where{pop}
+{/targetdump-hook{dup mark exch gsave initmat setmatrix{{mark/Dest 4 2
+roll targetvalidate{aload pop exch pop/Page 3 1 roll/View exch[exch
+/FitH exch]/DEST pdfmark}{cleartomark}ifelse}forall}stackstopped pop
+grestore}bind def}ifelse/baseurl{mark exch 1 dict dup 3 -1 roll/Base
+exch put/URI exch/DOCVIEW{pdfmark}stackstopped pop}bind def
+/externalhack systemdict/PDF known def/oldstyle true def/initmat matrix
+currentmatrix def/actiondict 2 dict dup/Subtype/URI put def
+/weblinkhandler{dup 3 1 roll mark 4 1 roll/Title 4 1 roll splituri 3 -1
+roll dup length 0 gt{cvn/Dest exch 4 2 roll}{pop}ifelse{externalhack{
+/HTTPFile exch}{actiondict dup 3 -1 roll/URI exch put/Action exch}
+ifelse}{externalhack{/HTTPFile exch}{/File exch/Action/GoToR}ifelse}
+ifelse counttomark 2 sub -1 roll aload pop/Rect 4 1 roll/Border 3 1 roll
+/Color exch oldstyle{/LNK}{/Subtype/Link/ANN}ifelse gsave initmat
+setmatrix{pdfmark}stackstopped grestore}bind def/externalhandler where{
+pop}{/externalhandler{2 copy{weblinkhandler}exec{/externalhack
+externalhack not store 2 copy{weblinkhandler}exec{/externalhack
+externalhack not store/oldstyle false store 2 copy{weblinkhandler}exec{
+(WARNING: external refs disabled\012)print/externalhandler{pop pop}bind
+store externalhandler}{pop pop}ifelse}{pop pop/externalhack externalhack
+not store}ifelse}{pop pop/externalhandler{weblinkhandler pop}bind store}
+ifelse}bind def}ifelse/pdfmnew{dup type/stringtype eq{externalhandler}{
+exch dup rfch exch 3 -1 roll lookuptarget{mark 4 1 roll/Title 4 1 roll
+aload pop exch pop/Page 3 1 roll/View exch[exch/FitH exch]5 -1 roll
+aload pop/Rect 4 1 roll/Border 3 1 roll/Color exch/LNK gsave initmat
+setmatrix pdfmark grestore}{pop pop}ifelse}ifelse}bind def/pdfmold{dup
+type/stringtype eq{externalhandler}{exch dup rfch exch 3 -1 roll
+lookuptarget{mark 4 1 roll/Title 4 1 roll aload pop exch pop/Page 3 1
+roll/View exch[exch/FitH exch]5 -1 roll aload pop pop 0 3 getinterval
+/Rect 3 1 roll/Border exch/LNK gsave initmat setmatrix pdfmark grestore}
+{pop pop}ifelse}ifelse}bind def/pdfm where{pop}{/pdfm
+/currentdistillerparams where{pop currentdistillerparams dup
+/CoreDistVersion known{/CoreDistVersion get}{0}ifelse dup
+braindeaddistill le{(WARNING: switching to old pdfm because version =)
+print ==/pdfmold}{pop/pdfmnew}ifelse load}{/pdfmark where{pop{dup type
+/stringtype eq{externalhandler}{2 copy mark 3 1 roll{pdfmnew}
+stackstopped{2 copy mark 3 1 roll{pdfmold}stackstopped{
+(WARNING: pdfm disabled\012)print/pdfm{pop pop}store}{
+(WARNING: new pdfm failed, switching to old pdfm\012)print/pdfm/pdfmold
+load store}ifelse}{/pdfm/pdfmnew load store}ifelse pop pop}ifelse}}{{
+pop pop}}ifelse}ifelse bind def}ifelse end def
+
+%%EndProcSet
+%%BeginFont: CMSY10
+%!PS-AdobeFont-1.1: CMSY10 1.0
+%%CreationDate: 1991 Aug 15 07:20:57
+
+% Copyright (C) 1997 American Mathematical Society.  All Rights Reserved.
+
+11 dict begin
+/FontInfo 7 dict dup begin
+/version (1.0) readonly def
+/Notice (Copyright (C) 1997 American Mathematical Society. All Rights Reserved) readonly def
+/FullName (CMSY10) readonly def
+/FamilyName (Computer Modern) readonly def
+/Weight (Medium) readonly def
+/ItalicAngle -14.035 def
+/isFixedPitch false def
+end readonly def
+/FontName /CMSY10 def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 3 /asteriskmath put
+dup 15 /bullet put
+dup 33 /arrowright put
+readonly def
+/FontBBox{-29 -960 1116 775}readonly def
+/UniqueXX 5000820 def
+currentdict end
+currentfile eexec
+9b9c1569015f2c1d2bf560f4c0d52257bac8ced9b09a275ab231194ecf829352
+05826f4e975dcecec72b2cf3a18899ccde1fd935d09d813b096cc6b83cdf4f23
+b9a60db41f9976ac333263c908dcefcdbd4c8402ed00a36e7487634d089fd45a
+f4a38a56a4412c3b0baffaeb717bf0de9ffb7a8460bf475a6718b0c73c571145
+d026957276530530a2fbefc6c8f67052788e6703bb5ee49533870bca1f113ad8
+3750d597b842d8d96c423ba1273ddd32f3a54a912a443fcd44f7c3a6fe3956b0
+aa1e784aaec6fce08dae0c76da9d0a3eba57b98a6233d9e9f0c3f00fcc6b2c6a
+9ba23af389e6dfff4efec3de05d6276c6be417703ce508377f25960ef4ed83b4
+9b01b873f3a639ce00f356229b6477a081933fef3bb80e2b9dffa7f75567b1fa
+4d739b772f8d674e567534c6c5bbf1cf615372be20b18472f7aa58be8c216dbd
+df81cc0a86b6d8318ca68fe22c8af13b54d7576fe4ca5a7af9005ea5cc4edb79
+c0ab668e4fec4b7f5a9eb5f0e4c088cd818ecc4feb4b40ec8bd2981bf2336074
+b64c43079a611075699b4d5902c9a10bde669900444dd857d1f8cd40a5b05a5d
+ac70dd467d0f94b04b0ca0986c40ff16ebd97f48c685b800afdf115d5e91d17c
+99d30d767b1cd905450719736ad951c79e73849fd831f8ec9a60c8fdef493b4a
+ba6302de802218075ddd7565245f73985a4a9a4c80e06558537b4b12f3333902
+b2823457196d396071011290c0b5fc84c8e04c2cd429159b0e8230170082d0d6
+1171412e6b6968c3b1e3a7b07d8b293cdbf370f4df5dfb8608682f98894508cd
+0af9634ed44307f62d10dbcaec3c0dd9d259b2651be12bcb17d0e302e5ca59eb
+791e31a61637c3ef013578257070a5c2de5819f063fa33f4a9bc55a3196cfc97
+d4b073cc8375517e805711763dbea66c1f30355ad1673113c21d60c958eccaab
+f2ac029497b0f4d9c2cbf05a35246de5b511622b6a81767f333d916cf254b225
+644c91eb7467b3ca988c9fd594f1ef3ddd54d6c4f982b58315e24ae4d6caeb5d
+73f15640bfd6d7778c28ca96c29b7bfb9c12cd319461a63a4ea9f73de57f27b5
+dafbdfbf43b3fde24f8a1bb2ca8e43837f4ded5b17eeecedc7f278b478cbb49b
+cbc8b50beb0eff2ad3c64e050980231559dbe40f582000de5e515520b7779816
+3190476250642e89c34d950e49aa050a819ed219622763524e95a6eb05dd6422
+a99e04d98a2e73826080aa50712e9202cc0645348bd163466daf6b28edd7223b
+0d6bff8a95eb73545dab151ac42bd6f045bcd41429a84dae06371716a51211fb
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+
+%%EndFont 
+TeXDict begin 39158280 55380996 1000 600 600 (tutorial.dvi)
+@start /Fa 138[42 2[25 8[17 1[42 1[42 30[46 11[21 3[42
+42 42 42 4[21 46[{TeXBase1Encoding ReEncodeFont}12 74.7193
+/Helvetica rf /Fb 107[60 60 25[60 1[86 1[66 40 47 53
+66 66 60 66 100 33 2[33 66 60 40 53 66 53 66 60 12[80
+66 86 1[73 2[113 5[93 3[86 1[86 10[60 60 60 60 60 60
+2[30 40 3[40 40 36[66 66 2[{TeXBase1Encoding ReEncodeFont}43
+119.552 /Times-Bold rf /Fc 139[57 1[76 1[96 7[96 2[76
+3[86 29[124 12[86 86 86 86 86 86 49[{TeXBase1Encoding ReEncodeFont}13
+172.188 /Times-Bold rf /Fd 134[37 4[23 32 32 1[42 42
+42 4[23 42 1[23 37 42 37 1[42 97[{TeXBase1Encoding ReEncodeFont}14
+83.022 /Times-Italic rf /Fe 222[83 17[42 11[42 3[{}3
+83.022 /CMSY10 rf /Ff 104[83 42 1[42 42 25[42 42 60 42
+46 28 32 37 46 46 42 46 69 23 46 28 23 46 42 28 37 46
+37 46 42 28 42 1[28 1[28 1[60 1[83 60 60 55 46 60 65
+51 65 60 78 55 65 1[32 65 65 51 55 60 60 55 60 77 42
+47 47 47 28 28 42 42 42 42 42 42 42 42 42 42 23 21 28
+21 47 42 28 28 28 2[42 42 1[28 29[46 46 2[{
+TeXBase1Encoding ReEncodeFont}87 83.022 /Times-Bold rf
+/Fg 134[103 103 2[115 69 80 92 115 115 103 115 172 57
+2[57 115 103 1[92 115 92 115 103 23[80 3[138 1[149 8[69
+3[103 103 103 103 103 103 4[52 44[{TeXBase1Encoding ReEncodeFont}31
+206.559 /Times-Bold rf /Fh 107[37 37 24[37 42 42 60 42
+42 23 32 28 42 42 42 42 65 23 42 1[23 42 42 28 37 42
+37 42 37 1[42 1[28 1[28 1[60 60 78 60 60 51 46 55 1[46
+60 60 74 51 60 1[28 1[60 46 51 60 55 55 60 1[37 47 47
+47 23 23 42 42 42 42 42 42 42 42 42 42 1[21 28 21 47
+42 28 28 28 5[28 29[46 46 2[{TeXBase1Encoding ReEncodeFont}79
+83.022 /Times-Roman rf /Fi 138[50 6[50 8[44 26[39 19[50
+1[50 1[50 1[50 3[25 44[{TeXBase1Encoding ReEncodeFont}9
+99.6264 /Times-Roman rf /Fj 107[50 50 25[50 50 72 50
+55 33 39 44 55 55 50 55 83 28 2[28 55 50 33 44 55 44
+55 50 7[72 4[66 55 4[72 94 8[72 72 66 72 6[33 3[50 50
+50 50 50 50 2[25 1[25 2[33 33 37[55 2[{TeXBase1Encoding ReEncodeFont}46
+99.6264 /Times-Bold rf /Fk 134[86 86 1[86 7[86 24[124
+105 96 115 2[124 2[105 2[57 3[105 124 2[124 10[86 54[{
+TeXBase1Encoding ReEncodeFont}15 172.188 /Times-Roman
+rf end
+%%EndProlog
+%%BeginSetup
+%%Feature: *Resolution 600dpi
+TeXDict begin
+%%PaperSize: A4
+
+HPSdict begin
+/TargetAnchors
+0 dict dup begin
+end targetdump-hook def
+TeXDict begin
+%%EndSetup

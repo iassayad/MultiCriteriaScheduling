@@ -1,0 +1,116 @@
+dnl (c)INRIA 2004
+divert(-1)
+# SynDEx v6 generic fault tolerant executive macros definitions (fault tolerant executive generator),
+# relying on processor-specific or media-specific macros,
+# see <type>.m4x for macros specific to processor or media type <type>.
+
+
+# addition operation
+define(`addition',`ifelse(
+MGC,`INIT',`dnl',
+MGC,`LOOP',`$3[0] = $2[0] + $1[0];',
+MGC,`END',`dnl')')
+
+# sensors operation
+define(`sensor2',`ifelse(
+MGC,`INIT',`dnl',
+MGC,`LOOP',`$1[0] = 10;',
+MGC,`END',`dnl')')
+
+
+#root sends faults_ack to other operators 
+define(`faults_ack',`ifelse(
+MGC,`INIT',`dnl',
+MGC,`LOOP',`printf("ack : pass to next loop\n\n");',
+MGC,`END',`dnl')')
+
+#root waits for faults_synch_send to synchronize with other operators 
+define(`faults_ack_recv',`ifelse(
+MGC,`INIT',`dnl',
+MGC,`LOOP',`;',
+MGC,`END',`dnl')')
+
+#other operators sends faults_synch_send to synchronize with root 
+define(`faults_synch_send',`ifelse(
+MGC,`INIT',`dnl',
+MGC,`LOOP',`;',
+MGC,`END',`dnl')')
+
+#########################
+# COMMUNICATION sequences
+# Hooks are provided for TARGET HARDWARE DEPENDENT customization macros:
+# `thread_' includes <mediaType>.m4x if it exists, then calls:
+#   `<mediaType>_shared_' if defined, for variables/subroutines/interrupts;
+#   `basicThread_' to generate an entry label for the communication sequence;
+#   `<mediaType>_ini_' if defined, for media configuration/initialization.
+	# `endthread_' calls `<mediaType>_end_' if defined, then `basicEndthread_'.
+# `reliable_send_' calls `<mediaType>_reliable_send_'
+# `reliable_recv_' calls `<mediaType>_reliable_recv_'
+# `reliable_sync_' calls `<mediaType>_reliable_sync_'
+
+
+# -----
+# reliable_send_(bufferName, senderProcrType,senderProcrName {,receiverProcrName})
+def(`reliable_send_',`defined_($1)dnl check $1 buffer existence
+ifdef(`mediaType_',,     dnl check `reliable_send_' context
+`error_(`Use `reliable_send_' between `thread_' and `endthread_'')')dnl
+ifdef(mediaType_()`_reliable_send_',, dnl check `reliable_send_' substitution
+`error_(mediaType_()`_reliable_send_ macro is undefined')')dnl
+mediaType_()_reliable_send_($@)')
+# -----------------
+# <mediaType>_reliable_send_(bufferName,Procrs) TARGET MEDIA DEPENDENT
+
+# -----
+# recv_(bufferName, senderProcrType,senderProcrName {,receiverProcrName})
+# the senderProcrType may be used to decide if byte-reversing is needed
+def(`reliable_recv_',`defined_($1)dnl check $1 buffer existence
+ifdef(`mediaType_',,     dnl check `reliable_recv_' context
+`error_(`Use `reliable_recv_' between `thread_' and `endthread_'')')dnl
+ifdef(mediaType_()`_reliable_recv_',, dnl check `reliable_recv_' substitution
+`error_(mediaType_()`_reliable_recv_ macro is undefined')')dnl
+mediaType_()_reliable_recv_($@)')
+# -----------------
+# <mediaType>_reliable_recv_(bufferName,Procrs) TARGET MEDIA DEPENDENT
+
+# -----
+# reliable_sync_(dataType,size, senderProcrType,senderProcrName {,receiverProcrName})
+def(`reliable_sync_',`ifdef(`$1_size_',,`error_(`Undefined data type: $1')')dnl
+ifdef(`mediaType_',, dnl check `reliable_sync_' context
+`error_(`Use `reliable_sync_' between `thread_' and `endthread_'')')dnl
+ifdef(mediaType_()`_reliable_sync_',, dnl check `reliable_sync_' substitution
+`error_(mediaType_()`_reliable_sync_ macro is undefined')')dnl
+mediaType_()_reliable_sync_($@)')
+# -----------------
+# <mediaType>_reliable_sync_(dataType,size,Procrs) TARGET MEDIA DEPENDENT
+
+
+
+# ---------
+# TCP_reliable_send_(1bufferName, 2senderType {,3senderNames} {, receiverNames})
+define(`TCP_reliable_send_', `ifelse($4,,,`dnl broadcast to each receiver:
+_(write(sd[procrIndex_($4)], (char*)$1, $1_size_*sizeof($1_type_));)dnl
+TCP_reliable_send_($1,$2,$3, shift(shift(shift(shift($@)))))')')
+
+# ---------
+# TCP_reliable_recv_(1bufferName, 2senderType {,3sendersName} {, receiverNames})
+define(`TCP_reliable_recv_', `pushdef(`pI',procrIndex_($3))dnl
+_(for(pp=(char*)$1, len=$1_size_*sizeof($1_type_); len!=0; pp+=n, len-=n))dnl
+_(  n = read(sd[pI], pp, len);)dnl
+ifelse($1_type_()_size_,1,, `dnl
+_(if(brev[pI]) brev`'$1_type_()_size_`'((int*)$1, $1_size_);)')dnl
+popdef(`pI')')
+
+# ---------
+# TCP_reliable_sync_(1bufferName, 2senderType {,3sendersName} {, receiverNames})
+define(`TCP_reliable_sync_',/* TCP : nothing worth to TCP reliable sync ($@) */)dnl nothing worth to do
+
+
+###############
+# CLOCK SYNCHRONIZERS
+# To synchronize processors clock
+
+# clock_synchronisation 
+define(`clock_synchronisation_',`sleep(4);')
+
+
+divert`'dnl ---------------------- End of file -------------------------

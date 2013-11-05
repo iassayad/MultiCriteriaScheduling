@@ -1,0 +1,125 @@
+#!/bin/sh
+# (c)INRIA 2001
+# SynDEx v5 remote-shell-call for use by U.m4m (Unix workstation target)
+# use: rshcd <hostname> <command> [-- extra inputs -o extra outputs]
+# WARNING: requires /bin/ksh for its '${variable#pattern}' construct
+hostname=$1 ; shift ; command="$1" ; shift
+
+# rshcd executes <command> on <hostname>, like rsh, but unlike rsh:
+# - <command> is executed in the same user's subdirectory (relative to $HOME),
+# - <command> argument files are local, not remote.
+# - provision is given to transfer files not passed to <command>
+
+# If <hostname> is the local hostname,
+# rshcd simply executes <command> locally:
+
+if [ $hostname = `uname -n` ] ; then
+  while [ -n "$1" ] ; do
+    case $1 in
+      --) break ;; # skip extra
+       *) command="$command $1" ;;
+    esac
+    shift
+  done
+  echo "$command"
+  exec sh -c "$command"
+fi
+
+# Otherwise, rshcd uses rsh and cd, but `pwd` must be a subdirectory of $HOME:
+
+case `pwd` in
+  $HOME*)  PWD=`pwd` ; relpwd=.${PWD#$HOME} ;;
+  *)  echo "rshcd $hostname: must be run from a subdirectory of HOME" >&2 ;
+      echo "PWD=`pwd` is not a subdirectory of HOME=$HOME" >&2 ;
+      exit 1 ;;
+esac
+
+# If the local and remote $HOME directory are physically identical,
+# i.e. share (are mounted on) the same partition,
+# rshcd simply uses rsh and cd:
+
+if [ ! -x $hostname.mnt ]
+then  rsh $hostname  ln -s /bin/true  $relpwd/$hostname.mnt
+  test -x $hostname.mnt  ||  ln -s /bin/false $hostname.mnt
+fi
+if ./$hostname.mnt ; then
+  command="rsh $hostname cd $relpwd \&\& $command"
+  while [ -n "$1" ] ; do
+    case $1 in
+      --) break ;; # skip extra
+       *) command="$command $1" ;;
+    esac
+    shift
+  done
+  echo "$command"
+  exec sh -c "$command"
+fi
+
+# Otherwise rshcd also uses tar to transfer <command> argument files (arguments
+# not prefixed with a "-"), before executing <command> for input files (those
+# before any "-o" argument), and after for output files (those after "-o").
+# Moreover, files passed after "--" are extra inputs until any "-o" argument,
+# and extra outputs after "-o"; extra inputs and outputs are not passed to
+# <command>, but are transfered.
+
+# concatenate command inputs:
+while [ -n "$1" ] ; do
+  case $1 in
+   -o*) command="$command $1" ;
+	output=${1#-o} ; # in case "-ofile" without space
+	shift ; break ;; # skip to outputs
+    --) break ;; # skip to extras
+    -*) command="$command $1";;
+     *) command="$command $1" ; inputs="$inputs $relpwd/$1" ;;
+  esac
+  shift
+done
+# concatenate command outputs:
+while [ -n "$1" ] ; do
+  case $1 in
+    --) break ;; # skip to extras
+    -*) command="$command $1" ;;
+     *) command="$command $1" ; output="$output $1" ;;
+  esac
+  shift
+done
+# concatenate extra inputs:
+while [ -n "$1" ] ; do
+  case $1 in
+   -o*) output="$output ${1#-o}" ; # case "-ofile" w/o space
+	shift ; break ;;
+    -*) ;; # ignore options
+     *) inputs="$inputs $relpwd/$1" ;;
+  esac
+  shift
+done
+# concatenate extra outputs:
+while [ -n "$1" ] ; do
+  case $1 in
+    -*) ;; # ignore options
+     *) output="$output $1" ;;
+  esac
+  shift
+done
+
+test -n "$inputs" && rcommand="(cd ; tar cf - $inputs) | " || rcommand=""
+                     rcommand="$rcommand""rsh $hostname"
+test -n "$inputs" && rcommand="$rcommand tar xf - \&\&"
+                     rcommand="$rcommand cd $relpwd \&\& $command"
+test -n "$output" && rcommand="$rcommand \&\& tar cf - $output | tar xf -"
+
+echo "$rcommand" && exec sh -c "$rcommand"
+
+# For example, "rshcd myhost cc -S my.c b.o -lm -o my -- my.h -o my.s" will:
+# - if myhost is the local host:
+#
+#   cc -g my.c b.o -lm -o my
+#
+# - otherwise, if $HOME is shared with myhost, with X=relpwd:
+#
+#   rsh myhost cd $X '&&' cc -g my.c b.o -lm -o my
+#
+# - otherwise:
+#
+#   (cd; tar cf - $X/my.c $X/b.o $X/my.h) | (rsh myhost tar xf - '&&'\
+#    cd $X '&&' cc -g my.c b.o -lm -o my '&&' tar cf - my my.s) | tar xf -

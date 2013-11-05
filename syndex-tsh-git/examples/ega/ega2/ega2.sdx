@@ -1,0 +1,141 @@
+syndex_version : "6.6.0"
+
+# Libraries
+include "float.sdx";
+include "u.sdx";
+
+# Algorithms
+def constant filter_coeffs <length> 50,106:
+ ! float[length] o 1 ;
+
+def algorithm adaptator  279,131:
+ ? float[1] g 1 @27,135;
+ ? float[1] w 2 @25,167;
+ ? float[1] i 3 @28,207;
+ ! float[1] o 1 @250,166;
+conditions: true;
+references:
+ float/Arit_mul<1> mul @96,117;
+ float/Arit_sub<1> sub @169,136;
+dependences:
+ strong_precedence_data i -> sub.a;
+ strong_precedence_data w -> mul.a;
+ strong_precedence_data g -> mul.b;
+ strong_precedence_data mul.o -> sub.b;
+ strong_precedence_data sub.o -> o;
+
+def algorithm dot_product_accumulator  326,151:
+ ? float[1] a 1 @0,0;
+ ? float[1] b 2 @0,40;
+ ? float[1] x 3 @0,80;
+ ! float[1] x 1 @280,40;
+conditions: true;
+references:
+ float/Arit_mul<1> mul @80,0;
+ float/Arit_add<1> add @160,40;
+dependences:
+ strong_precedence_data b -> mul.b;
+ strong_precedence_data a -> mul.a;
+ strong_precedence_data add.o -> x;
+ strong_precedence_data mul.o -> add.a;
+ strong_precedence_data x -> add.b;
+
+def algorithm dot_product <N> 302,145:
+ ? float[N] a 1 @0,0;
+ ? float[N] b 2 @0,40;
+ ! float[1] o 1 @280,40;
+conditions: true;
+references:
+ dot_product_accumulator acc @120,0;
+ float/cst<{0}> zero @0,80;
+dependences:
+ strong_precedence_data acc.x -> o;
+ strong_precedence_data a -> acc.a;
+ strong_precedence_data b -> acc.b;
+ strong_precedence_data zero.o -> acc.x;
+
+def algorithm ega  609,288:
+conditions: true;
+references:
+ float/input<1> gensig @94,130;
+ float/Arit_sub<1> sub @391,237;
+ float/cst<{-1}> gain @389,319;
+ float/Arit_mul<1> mul @482,239;
+ float/output<1> visu @489,318;
+ float/delay<{1,2,3,4,5,6,7,8,9};1> coeffs @563,111;
+ adaptator adap @562,176;
+ float/window<1;9> windowa @189,143;
+ float/window<1;9> window @192,218;
+ dot_product<9> filta @311,111;
+ dot_product<9> filt @309,261;
+ float/cst<{1,-1,2,-5,5,8,-4,9,0}> Coeff @201,295;
+dependences:
+ strong_precedence_data Coeff.o -> filt.b;
+ strong_precedence_data coeffs.o -> filta.b;
+ strong_precedence_data filta.o -> sub.a;
+ strong_precedence_data filt.o -> sub.b;
+ strong_precedence_data windowa.o -> filta.a;
+ strong_precedence_data window.o -> filt.a;
+ strong_precedence_data windowa.o -> adap.w;
+ strong_precedence_data gensig.o -> window.i;
+ strong_precedence_data gensig.o -> windowa.i;
+ strong_precedence_data gain.o -> mul.b;
+ strong_precedence_data sub.o -> visu.i;
+ strong_precedence_data sub.o -> mul.a;
+ strong_precedence_data mul.o -> adap.g;
+ strong_precedence_data coeffs.o -> adap.i;
+ strong_precedence_data adap.o -> coeffs.i;
+
+
+# Architectures
+def architecture archi2procs 323,136:
+operators:
+ u/U root @50,50;
+ u/U p1 @287,47;
+ main operator root;
+medias:
+ u/TCP tcp broadcast @165,113;
+connections:
+ root.x tcp;
+ p1.x tcp;
+
+
+# Main Algorithm / Main Architecture
+main algorithm ega ;
+main architecture archi2procs;
+
+# Extra durations
+extra_durations_operator u/U :
+Implantation_Implode_float = 2;
+dot_product_accumulator = 5;
+Implode_float = 2;
+adaptator = 5;
+window = 3;
+dot_product = 5;
+Implantation_Explode_float = 3;
+Explode_float = 2;
+extra_durations_media u/TCP :
+float = 2;
+float = 2;
+float = 2;
+bool = 1;
+bool = 1;
+bool = 1;
+ushort = 1;
+ushort = 1;
+ushort = 1;
+lint = 1;
+lint = 1;
+lint = 1;
+uchar = 1;
+uchar = 1;
+uchar = 1;
+int = 2;
+int = 2;
+int = 2;
+
+# Software components
+software_component xsc1 : [\\ega\visu] [\\ega\gensig] ;
+
+# Constraints
+absolute constraint : xsc1 on archi2procs.root ;

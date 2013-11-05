@@ -1,0 +1,125 @@
+syndex_version : "6.6.0"
+
+# Libraries
+include "int.sdx";
+include "u.sdx";
+
+# Algorithms
+def algorithm CondO  :
+
+def algorithm CondI  :
+
+def algorithm Implantation_Condition_Out  :
+
+def algorithm Implantation_Condition_In  :
+
+def algorithm switch2  243,119:
+ ? int[1] a 1 @8,8;
+ ? int[1] b 2 @8,36;
+ ? int[1] d 3 @8,64;
+ ! int[1] c 1 @222,46;
+conditions: a = 1;
+references:
+ int/Arit_add<1> addimbr1 @51,7;
+ int/Arit_mul<1> mulimbr1 @138,39;
+dependences:
+ strong_precedence_data d -> mulimbr1.b;
+ strong_precedence_data mulimbr1.o -> c;
+ strong_precedence_data addimbr1.o -> mulimbr1.a;
+ strong_precedence_data b -> addimbr1.b;
+ strong_precedence_data a -> addimbr1.a;
+conditions: a = 2;
+references:
+ int/Arit_div<1> div2 @81,24;
+dependences:
+ strong_precedence_data div2.o -> c;
+ strong_precedence_data d -> div2.b;
+ strong_precedence_data b -> div2.a;
+conditions: a = 4;
+references:
+dependences:
+ strong_precedence_data d -> c;
+conditions: a = 3;
+references:
+dependences:
+ strong_precedence_data b -> c;
+
+def algorithm switch  237,170:
+ ? int[1] a 1 @7,65;
+ ? int[1] c 2 @8,11;
+ ! int[1] b 1 @198,38;
+conditions: c = 1;
+references:
+ switch2 imbr @91,8;
+ int/cst<{2}> deux @12,104;
+dependences:
+ strong_precedence_data deux.o -> imbr.d;
+ strong_precedence_data c -> imbr.b;
+ strong_precedence_data a -> imbr.a;
+ strong_precedence_data imbr.c -> b;
+conditions: c = 2;
+references:
+ int/Arit_add<1> add2 @91,15;
+dependences:
+ strong_precedence_data add2.o -> b;
+ strong_precedence_data c -> add2.b;
+ strong_precedence_data a -> add2.a;
+
+def algorithm top  228,184:
+conditions: true;
+references:
+ switch c @73,63;
+ int/input<1> i1 @8,34;
+ int/input<1> i2 @8,126;
+ int/output<1> o @168,80;
+dependences:
+ strong_precedence_data i2.o -> c.a;
+ strong_precedence_data i1.o -> c.c;
+ strong_precedence_data c.b -> o.i;
+
+
+# Architectures
+def architecture architest 323,82:
+operators:
+ u/U u1 @284,85;
+ u/U root @37,84;
+ main operator root;
+medias:
+ u/TCP tcp broadcast @169,82;
+connections:
+ root.x tcp;
+ u1.x tcp;
+
+
+# Main Algorithm / Main Architecture
+main algorithm top ;
+main architecture architest;
+
+# Extra durations
+extra_durations_operator u/U :
+CondI = 3;
+switch = 5;
+CondO = 2;
+extra_durations_media u/TCP :
+float = 2;
+float = 2;
+bool = 1;
+bool = 1;
+ushort = 1;
+ushort = 1;
+lint = 1;
+lint = 1;
+uchar = 1;
+uchar = 1;
+int = 2;
+int = 2;
+
+# Software components
+software_component onU1 : [\\top\c\imbr\div2] [\\top\c\imbr\addimbr1] ;
+software_component onRoot : [\\top\i2] [\\top\i1] ;
+
+# Constraints
+absolute constraint : xsc1 on architest.root ;
+absolute constraint : xsc2 on architest.u1 ;
+absolute constraint : onU1 on architest.u1 ;
+absolute constraint : onRoot on architest.root ;
