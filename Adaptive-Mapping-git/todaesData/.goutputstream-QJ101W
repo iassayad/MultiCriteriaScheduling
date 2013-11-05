@@ -1,0 +1,6 @@
+-Le nombre d'opération dans le fichier "operation.csv" doit être égale au nombre de poste dans le fichier opérateur.
+-Le nombre ligne dans "Liaison entre les opérations" du fichier operation.csv doit être égale au nombre d'opération (dans le même fichier).
+-Le nombre des "durées des arcs dans les liens" dans le fichier "operation.csv" doit être égale au nombre de lien.
+-Le nombre des lignes des "durées des arcs dans les liens" de le fichier "operation.csv" doit être égale au nombre d'arc.
+
+-Operation dont l
