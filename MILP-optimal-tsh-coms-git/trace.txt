@@ -1,0 +1,594 @@
+Lambda obj = 4.0E-9
+Power obj = 1.0
+--->DECLARATIONS
+ //////////////////////////////////////////////////////// AFFICHAGE S3 
+ K , a -> ll : c , k 1 , 0 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 0 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 0 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 0 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 1 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 1 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 1 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 1 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 2 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 2 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 2 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 2 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 1 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 1 -> 0 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 1 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 0 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 1 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 1 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 2 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 2 -> 0 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 2 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 0 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 2 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 1 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 2 -> 2 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 2 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 2 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 2 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 2 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 2 -> 2 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 3 -> 0 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 3 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 0 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 3 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 0 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 3 -> 0 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 3 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 3 -> 1 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 3 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 1 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 3 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 5 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 5 -> 1 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 5 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 1 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 2 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 2 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 6 -> 0 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 6 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 0 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 6 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 0 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 6 -> 0 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 6 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 6 -> 2 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 6 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 2 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 7 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 7 -> 1 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 7 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 1 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 7 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 1 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 7 -> 1 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 7 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 7 -> 2 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 7 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 2 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 8 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 3 , 1 = 1
+<---DECLARATIONS
+DEFS
+EXISTENCE and ZEROING
+PRECEDENCE TASKS
+EXCLUSION TASKS
+PRECEDENCE COMS
+--->  EXCLUSION COMS ...
+---> PRECEDENCE TASKS COMS ...
+---> Solve ...
+Tried aggregator 2 times.
+Presolve has eliminated 1247216 rows and 385139 columns...
+Aggregator has done 522 substitutions...
+Presolve has improved bounds 1774 times...
+MIP Presolve eliminated 1247216 rows and 385139 columns.
+MIP Presolve modified 18304 coefficients.
+Aggregator did 522 substitutions.
+Reduced MIP has 8429 rows, 2777 columns, and 23656 nonzeros.
+Reduced MIP has 2748 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time =    5.37 sec.
+Clique table members: 5259.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time =    0.09 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer     Best Node    ItCnt     Gap
+
+      0     0       55.5033   101                     55.5033      325         
+      0     0       66.9057   127                   Cuts: 369      793         
+      0     0       66.9727   155                    Cuts: 95      968         
+      0     0       67.0452   151                   Cuts: 104     1082         
+      0     0       67.6297   162                    Cuts: 85     1281         
+      0     0       67.6297   151                    Cuts: 62     1322         
+      0     0       67.6297   154                    Cuts: 25     1382         
+      0     0       68.8594   132                    Cuts: 68     1532         
+      0     0       68.8594   148                    Cuts: 41     1587         
+
+Repeating presolve.
+Tried aggregator 2 times.
+MIP Presolve eliminated 5006 rows and 1249 columns.
+MIP Presolve modified 612 coefficients.
+Aggregator did 358 substitutions.
+Reduced MIP has 3065 rows, 1170 columns, and 9319 nonzeros.
+Reduced MIP has 1149 binaries, 10 generals, 0 SOSs, and 0 indicators.
+Tried aggregator 1 time.
+MIP Presolve eliminated 8 rows and 0 columns.
+MIP Presolve modified 42 coefficients.
+Reduced MIP has 3057 rows, 1170 columns, and 9287 nonzeros.
+Reduced MIP has 1149 binaries, 10 generals, 0 SOSs, and 0 indicators.
+Represolve time =    0.12 sec.
+Clique table members: 1984.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time =    0.12 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer     Best Node    ItCnt     Gap
+
+      0     0       68.8594   122                     68.8594     2043         
+*     0+    0                          282.5733       68.8594     2043   75.63%
+*     0+    0                          163.6900       68.8594     2043   57.93%
+*     0+    0                          160.0600       68.8594     2043   56.98%
+      0     2       68.8786   122      160.0600       69.8627     2043   56.35%
+Elapsed time =  14.46 sec. (tree size =  0.00 MB, solutions = 3)
+    100    77      103.2540    97      160.0600       75.0969     5341   53.08%
+    200   149       86.2564   102      160.0600       75.6383     8437   52.74%
+*   216   162      integral     0      152.8000       75.6383    10032   50.50%
+    300   217      116.0193    94      152.8000       76.5434    14293   49.91%
+    400   293      105.1172   100      152.8000       79.0090    17981   48.29%
+    500   316      110.3861   143      152.8000       80.5391    24504   47.29%
+    600   260        cutoff            152.8000       94.8468    31723   37.93%
+    700   242        cutoff            152.8000       98.4179    37455   35.59%
+    800   232      142.8622    79      152.8000      104.0742    43419   31.89%
+    900   229      119.2217    12      152.8000      107.9361    49155   29.36%
+   1000   270        cutoff            152.8000      111.1711    54387   27.24%
+Elapsed time =  47.78 sec. (tree size =  0.15 MB, solutions = 4)
+   1100   312      142.8622    79      152.8000      114.5218    59745   25.05%
+   1200   338      143.0597    79      152.8000      116.5666    64623   23.71%
+   1300   362        cutoff            152.8000      118.3340    69886   22.56%
+   1400   386        cutoff            152.8000      118.9758    74999   22.14%
+   1500   398      121.9701   123      152.8000      120.7769    79344   20.96%
+   1600   424        cutoff            152.8000      121.5274    84289   20.47%
+   1700   447        cutoff            152.8000      122.0900    89386   20.10%
+   1800   461      142.4350    81      152.8000      122.9404    93971   19.54%
+   1900   482        cutoff            152.8000      124.1157    98810   18.77%
+   2000   498      141.1460    80      152.8000      124.8513   103939   18.29%
+Elapsed time =  58.70 sec. (tree size =  0.28 MB, solutions = 4)
+   2100   509      137.3686     6      152.8000      126.0144   109025   17.53%
+   2200   509      144.9141    76      152.8000      127.2191   113020   16.74%
+   2300   499        cutoff            152.8000      128.3886   116606   15.98%
+   2400   500      131.8897    11      152.8000      128.8939   120100   15.65%
+   2500   497        cutoff            152.8000      129.9121   123535   14.98%
+   2600   490      140.2806     9      152.8000      130.3428   127093   14.70%
+   2700   470        cutoff            152.8000      131.4464   130136   13.97%
+   2800   466        cutoff            152.8000      131.8897   134516   13.68%
+   2900   440        cutoff            152.8000      131.8897   137684   13.68%
+   3000   420      142.8622    79      152.8000      132.8881   141197   13.03%
+Elapsed time =  68.05 sec. (tree size =  0.24 MB, solutions = 4)
+   3100   415        cutoff            152.8000      133.0696   145350   12.91%
+   3200   411        cutoff            152.8000      134.1919   149323   12.18%
+   3300   407      142.8957    83      152.8000      134.7124   152703   11.84%
+   3400   409        cutoff            152.8000      134.7124   157034   11.84%
+   3500   422        cutoff            152.8000      134.7124   161077   11.84%
+   3600   433        cutoff            152.8000      134.7124   165376   11.84%
+   3700   450      143.0597    81      152.8000      134.7124   169574   11.84%
+   3800   437        cutoff            152.8000      134.7865   173524   11.79%
+   3900   427        cutoff            152.8000      134.8070   177319   11.78%
+   4000   419        cutoff            152.8000      134.8070   181693   11.78%
+Elapsed time =  77.98 sec. (tree size =  0.24 MB, solutions = 4)
+   4100   411        cutoff            152.8000      134.8942   186790   11.72%
+   4200   393        cutoff            152.8000      136.0182   191284   10.98%
+   4300   355        cutoff            152.8000      138.2282   194173    9.54%
+   4400   292      142.8622    13      152.8000      141.1335   196057    7.64%
+   4500   253      142.8622    13      152.8000      141.2558   199072    7.56%
+   4600   182        cutoff            152.8000      142.4350   201854    6.78%
+   4700   150      143.0597    79      152.8000      142.4350   204833    6.78%
+   4800   116        cutoff            152.8000      142.4541   208148    6.77%
+   4900    43      144.0084    20      152.8000      143.2431   211370    6.25%
+
+Clique cuts applied:  1
+Implied bound cuts applied:  20
+Flow cuts applied:  50
+Mixed integer rounding cuts applied:  1
+Zero-half cuts applied:  41
+Gomory fractional cuts applied:  16
+<--- Solve ...
+ Schedule tackled in 202.719 seconds using currentTimeMillis
+ Status  = Optimal
+ Time  = 202.719
+ W  = 152.79999999999976
+ L  = 1.026669425048112E-9
+ P  = 0.9999999999999974
+ R  = 0.9999998431249242
+ E  = 152.79999999999936
+---> j, K 0 2
+Y[j][K]: 1.0
+---> j, K, a, b 0 2 4 15
+XY[j][K][a][b]: 1.0000000000000355
+---> j, K 1 2
+Y[j][K]: 1.0
+---> j, K, a, b 1 2 4 15
+XY[j][K][a][b]: 1.0000000000000178
+---> j, K 2 2
+Y[j][K]: 1.0
+---> j, K, a, b 2 2 4 15
+XY[j][K][a][b]: 1.000000000000071
+---> j, K 3 2
+Y[j][K]: 1.0
+---> j, K, a, b 3 2 4 15
+XY[j][K][a][b]: 1.0
+---> j, K 4 2
+Y[j][K]: 1.0
+---> j, K, a, b 4 2 4 15
+XY[j][K][a][b]: 1.00000000000001
+---> j, k, l, m 0 0 1 3
+x4[j][k][l][m]: 1.0000000000000002
+ET ................. x3[j][k][l]: 1.0000000000000002
+---> j, k, l, m 0 1 1 3
+x4[j][k][l][m]: 1.0000000000000355
+ET ................. x3[j][k][l]: 1.0000000000000355
+---> j, k, l, m 1 0 1 3
+x4[j][k][l][m]: 1.000000000000015
+ET ................. x3[j][k][l]: 1.000000000000015
+---> j, k, l, m 1 1 1 3
+x4[j][k][l][m]: 0.9999999999999905
+ET ................. x3[j][k][l]: 1.0000000000000009
+---> j, k, l, m 2 0 1 3
+x4[j][k][l][m]: 1.0000000000000355
+ET ................. x3[j][k][l]: 1.0000000000000355
+---> j, k, l, m 2 1 1 3
+x4[j][k][l][m]: 1.0000000000000355
+ET ................. x3[j][k][l]: 1.0000000000000355
+---> j, k, l, m 3 0 1 3
+x4[j][k][l][m]: 1.0
+ET ................. x3[j][k][l]: 1.0
+---> j, k, l, m 3 1 1 3
+x4[j][k][l][m]: 0.9999999999999991
+ET ................. x3[j][k][l]: 1.0
+---> j, k, l, m 4 0 1 3
+x4[j][k][l][m]: 1.00000000000001
+ET ................. x3[j][k][l]: 1.00000000000001
+---> j, k, l, m 4 1 1 3
+x4[j][k][l][m]: 1.0
+ET ................. x3[j][k][l]: 1.0
+SP[i][j]  i 0 j 0 = 1.0
+SP[i][j]  i 0 j 1 = 1.0
+SP[i][j]  i 0 j 2 = 1.0
+SP[i][j]  i 0 j 3 = 1.0
+SP[i][j]  i 0 j 4 = 1.0
+SP[i][j]  i 1 j 0 = 1.0
+SP[i][j]  i 1 j 1 = 1.0
+SP[i][j]  i 1 j 2 = 1.0
+SP[i][j]  i 1 j 3 = 1.0
+SP[i][j]  i 1 j 4 = 1.0
+SP[i][j]  i 2 j 0 = 1.0
+SP[i][j]  i 2 j 1 = 1.0
+SP[i][j]  i 2 j 2 = 1.0
+SP[i][j]  i 2 j 3 = 1.0
+SP[i][j]  i 2 j 4 = 1.0
+SP[i][j]  i 3 j 0 = 1.0
+SP[i][j]  i 3 j 1 = 1.0
+SP[i][j]  i 3 j 2 = 1.0
+SP[i][j]  i 3 j 3 = 1.0
+SP[i][j]  i 3 j 4 = 1.0
+SP[i][j]  i 4 j 0 = 1.0
+SP[i][j]  i 4 j 1 = 1.0
+SP[i][j]  i 4 j 2 = 1.0
+SP[i][j]  i 4 j 3 = 1.0
+SP[i][j]  i 4 j 4 = 1.0
+Lambda obj = 4.0E-9
+Power obj = 1.2000000000000002
+--->DECLARATIONS
+ //////////////////////////////////////////////////////// AFFICHAGE S3 
+ K , a -> ll : c , k 1 , 0 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 0 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 0 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 0 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 1 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 1 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 1 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 1 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 2 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 2 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 1 , 2 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 1 , 2 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 1 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 0 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 0 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 1 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 1 -> 0 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 1 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 0 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 1 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 1 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 1 -> 1 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 1 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 1 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 2 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 2 -> 0 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 2 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 0 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 2 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 2 -> 1 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 2 -> 2 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 2 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 2 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 2 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 2 -> 2 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 2 -> 2 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 3 -> 0 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 3 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 0 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 3 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 0 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 3 -> 0 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 3 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 3 -> 1 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 3 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 1 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 3 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 3 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 3 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 4 -> 2 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 4 -> 2 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 5 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 5 -> 1 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 5 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 5 -> 1 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 2 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 5 -> 2 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 5 -> 2 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 6 -> 0 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 6 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 0 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 6 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 0 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 6 -> 0 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 6 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 1 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 6 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 6 -> 2 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 6 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 6 -> 2 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 7 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 7 -> 1 : 0 , 0 = -1
+ K , a -> ll : c , k 2 , 7 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 1 : 1 , 0 = -1
+ K , a -> ll : c , k 2 , 7 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 7 -> 1 : 2 , 0 = -1
+ K , a -> ll : c , k 2 , 7 -> 1 : 2 , 1 = 1
+ K , a -> ll : c , k 2 , 7 -> 2 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 7 -> 2 : 0 , 1 = -1
+ K , a -> ll : c , k 2 , 7 -> 2 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 7 -> 2 : 1 , 1 = -1
+ K , a -> ll : c , k 2 , 8 -> 0 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 0 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 0 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 0 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 0 : 3 , 1 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 0 , 0 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 0 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 1 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 1 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 2 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 2 , 1 = 0
+ K , a -> ll : c , k 2 , 8 -> 1 : 3 , 0 = 1
+ K , a -> ll : c , k 2 , 8 -> 1 : 3 , 1 = 1
+<---DECLARATIONS
+DEFS
+EXISTENCE and ZEROING
+PRECEDENCE TASKS
+EXCLUSION TASKS
+PRECEDENCE COMS
+--->  EXCLUSION COMS ...
+---> PRECEDENCE TASKS COMS ...
+---> Solve ...
+Presolve has eliminated 1247152 rows and 385137 columns...
+Aggregator has done 522 substitutions...
+Presolve has improved bounds 1773 times...
+Tried aggregator 2 times.
+MIP Presolve eliminated 1247216 rows and 385139 columns.
+MIP Presolve modified 18304 coefficients.
+Aggregator did 522 substitutions.
+Reduced MIP has 8429 rows, 2777 columns, and 23656 nonzeros.
+Reduced MIP has 2748 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time =    5.75 sec.
+Clique table members: 5259.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time =    0.13 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer     Best Node    ItCnt     Gap
+
+      0     0       51.7798   101                     51.7798      333         
+      0     0       63.0267   142                   Cuts: 165      725         
+      0     0       63.0267   149                    Cuts: 63      799         
+      0     0       63.0267   165                    Cuts: 49      925         
+      0     2       63.0267   151                     63.0267      950         
+    100    60       86.0421   112                     65.6745     4261         
+*   130+   79                          242.7800       65.6745     4996   72.95%
+    200   119       75.5882   105      242.7800       65.6745     7821   72.95%
+*   260+  139                          166.8167       65.7242    10865   60.60%
+    300   159       80.1933   122      166.8167       66.4522    13094   60.16%
+    400   220      148.9667    55      166.8167       67.0386    15795   59.81%
