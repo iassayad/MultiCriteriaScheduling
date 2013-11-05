@@ -1,0 +1,4 @@
+This Web Page contains source code for :
+- Three criteria scheduling heuristics (TSH) : a heuristics for power, latency and execution time scheduling developed in Syndex.
+- Optimal three criteria scheduling algorithm : a MILP program developed using IBM CPLEX.
+- Adaptive throughput and power scheduling for a set of application developed in Java and uses MILP for individual application pareto-front generation.
