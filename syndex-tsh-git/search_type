@@ -1,9 +1,0 @@
-#!/bin/bash
-
-typ="$1"
-
-shift
-
-files=`echo $* | sed 's/\.ml/\.annot/g'`
-
-grep -B 2 "$typ" $files | grep '\.ml' | sed 's/^.*.annot-"\([^"]*\)" \([0-9]*\).*$/\1:\2:/'
